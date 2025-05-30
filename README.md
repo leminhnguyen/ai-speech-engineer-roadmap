@@ -1,9 +1,9 @@
 
 # 🥑 ROADMAP: AI Speech Engineer
 
-![GitHub stars](https://img.shields.io/github/stars/leminhnguyen/speech-engineer-roadmap?style=social)
-![GitHub forks](https://img.shields.io/github/forks/leminhnguyen/speech-engineer-roadmap?style=social)
-![GitHub last commit](https://img.shields.io/github/last-commit/leminhnguyen/speech-engineer-roadmap)
+![GitHub stars](https://img.shields.io/github/stars/leminhnguyen/ai-speech-engineer-roadmap?style=social)
+![GitHub forks](https://img.shields.io/github/forks/leminhnguyen/ai-speech-engineer-roadmap?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/leminhnguyen/ai-speech-engineer-roadmap)
 
 > A curated roadmap based on my 5 years of experience form zero to become a skilled AI Speech Engineer. 🚀👨‍💻  
 > This roadmap covers everything from fundamentals to cutting-edge research trends in the speech domain.
