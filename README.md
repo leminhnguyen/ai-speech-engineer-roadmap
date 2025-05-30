@@ -48,7 +48,7 @@
 
 ---
 
-## 🌱 #3 Dive Into Speech Core Technologies (8 months)
+## 🌱 #3 Dive Into Speech Core Technologies (12 months)
 
 ### 🎙️ Automatic Speech Recognition (ASR)
 - 📘 [SpeechBrain ASR](https://speechbrain.readthedocs.io/en/latest/tutorials/tasks/speech-recognition-from-scratch.html)
