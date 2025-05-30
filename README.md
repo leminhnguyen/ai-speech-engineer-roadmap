@@ -28,7 +28,6 @@
 
 ### 🔹 Audio Signal Processing for ML
 - 📺 [YouTube Series](https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0)
-- 📄 [Voice Processing PDF](materials/Voice-Processing-for-Machine-Learning.pdf)
 
 ---
 
