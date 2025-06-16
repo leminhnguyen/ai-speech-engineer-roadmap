@@ -13,25 +13,34 @@
 ## 📅 Overview Timeline
 
 | Phase                        | Duration   | Focus Areas                               |
-|-----------------------------|------------|-------------------------------------------|
-| 🧠 Foundations              | 2 month    | Math, Python, Signal Processing           |
+|------------------------------|------------|-------------------------------------------|
+| 🧠 Foundations              | 3 months   | Math, Python, Machine Learning, Deep Learning, Signal Processing           |
 | 💼 Tools & Frameworks       | 3 months   | Libraries, Audio Tools, Hugging Face      |
-| 🌱 Core Technologies        | 12 months   | ASR, TTS, Speaker Verification & Diarization |
+| 🌱 Core Technologies        | 12 months  | ASR, TTS, Speaker Verification & Diarization |
 | 🔬 Research Trends          | Continuous | Audio-Language Models                     |
 
 ---
 
-## 🧠 #1 Foundations (1 month)
+## 🧠 #1 Foundations (3 month)
 
 ### 🔹 Python Basic
 - 📺 [Python Tutorial for Beginners](https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
 
+### Machine Learning Basic
+- 📃 [Machine Learning Specialization (Free Course)](https://www.coursera.org/specializations/machine-learning-introduction)
+
+### 🔹 Deeplearning Basic
+- 📺 [1. what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk)
+- 📺 [2. Gradient descent, how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w)
+- 📺 [3. Backpropagation, intuitively](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
+- 📺 [4. Backpropagation calculus](https://www.youtube.com/watch?v=tIeHLnjs5U8)
+
 ### 🔹 Audio Signal Processing for ML
-- 📺 [YouTube Series](https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0)
+- 📺 [Learn all about speech concepts & features](https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0)
 
 ---
 
-## 💼 #2 Tools & Frameworks (2 months)
+## 💼 #2 Tools & Frameworks (3 months)
 
 ### 🧰 Frameworks & Libraries
 - `PyTorch` - Training models framework
@@ -51,14 +60,17 @@
 
 ## 🌱 #3 Dive Into Speech Core Technologies (12 months)
 
+### Transformers (Attention is all you need)
+- [Original Paper](http://arxiv.org/abs/1706.03762)
+- [Illustrated Transformer Blog](https://jalammar.github.io/illustrated-transformer/)
+- [Attention in transformers](https://www.youtube.com/watch?v=eMlx5fFNoYc)
+
 ### 🎙️ Automatic Speech Recognition (ASR)
 - [SpeechBrain ASR](https://speechbrain.readthedocs.io/en/latest/tutorials/tasks/speech-recognition-from-scratch.html)
 - [SpecAugment](https://blog.research.google/2019/04/specaugment-new-data-augmentation.html)
-- [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 - [Generation of large-scale simulated utterances in virtual rooms...](https://storage.googleapis.com/gweb-research2023-media/pubtools/pdf/509254e34b4c496eb3cfa1c2be1e1b5fc874bee3.pdf)
 - [Illustrated Wav2Vec2](https://jonathanbgn.com/2021/09/30/illustrated-wav2vec-2.html)
-- [CTC](https://distill.pub/2017/ctc/)
-- [Attention is All You Need](https://arxiv.org/abs/1706.03762)
+- [Sequence Modeling With CTC](https://distill.pub/2017/ctc/)
 - [Wav2Vec2](https://arxiv.org/abs/2005.08100)
 - [Whisper](https://arxiv.org/abs/2212.04356)
 - [Fast Conformer](https://arxiv.org/abs/2305.05084)
