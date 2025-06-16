@@ -21,7 +21,7 @@
 
 ---
 
-## 🧠 #1 Foundations (3 month)
+## 🧠 #1 Foundations (3 months)
 
 ### 🔹 Python Basic
 - 📺 [Python Tutorial for Beginners](https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
