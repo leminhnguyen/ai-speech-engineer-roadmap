@@ -60,7 +60,7 @@
 
 ## 🌱 #3 Dive Into Speech Core Technologies (12 months)
 
-### Transformers (Attention is all you need)
+### 🤖 Transformers (Attention is all you need)
 - [Original Paper](http://arxiv.org/abs/1706.03762)
 - [Illustrated Transformer Blog](https://jalammar.github.io/illustrated-transformer/)
 - [Attention in transformers](https://www.youtube.com/watch?v=eMlx5fFNoYc)
