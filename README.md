@@ -23,19 +23,19 @@
 
 ## 🧠 #1 Foundations (3 months)
 
-### 🔹 Python Basic
+### 🔹Python Basic
 - 📺 [Python Tutorial for Beginners](https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
 
-### Machine Learning Basic
+### 🔹Machine Learning Basic
 - 📃 [Machine Learning Specialization (Free Course)](https://www.coursera.org/specializations/machine-learning-introduction)
 
-### 🔹 Deeplearning Basic
+### 🔹Deeplearning Basic
 - 📺 [1. what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk)
 - 📺 [2. Gradient descent, how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w)
 - 📺 [3. Backpropagation, intuitively](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
 - 📺 [4. Backpropagation calculus](https://www.youtube.com/watch?v=tIeHLnjs5U8)
 
-### 🔹 Audio Signal Processing for ML
+### 🔹Audio Signal Processing for ML
 - 📺 [Learn all about speech concepts & features](https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0)
 
 ---
