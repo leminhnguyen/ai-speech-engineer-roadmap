@@ -119,6 +119,7 @@
 ## 🔬 #4 Research Trends
 
 ### 🤯 Audio Language Models
+- [On The Landscape of Spoken Language Models: A Comprehensive Survey](https://arxiv.org/abs/2504.08528)
 - [Recent Advances in Speech Language Models: A Survey](https://arxiv.org/pdf/2410.03751)
 - [Audio-Language Models for Audio-Centric Tasks: A survey](https://arxiv.org/pdf/2501.15177)
 - [CosyVoice: A Scalable Multilingual Zero-shot Text to Speech...](https://arxiv.org/abs/2407.05407)
