@@ -114,6 +114,7 @@
 - [Multi-scale Speaker Diarization with Dynamic Scale Weighting](https://arxiv.org/pdf/2203.15974)
 - [DiarizationLM: Speaker Diarization Post-Processing with Large Language Models](https://arxiv.org/html/2401.03506v10)
 - [Sortformer: Seamless Integration of Speaker Diarization and ASR...](https://arxiv.org/abs/2409.06656)
+- [Streaming Sortformer: Speaker Cache-Based Online ...](https://arxiv.org/abs/2507.18446)
 ---
 
 ## 🔬 #4 Research Trends
