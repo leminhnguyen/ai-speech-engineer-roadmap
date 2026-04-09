@@ -115,6 +115,9 @@ flowchart TD
 - [Illustrated Wav2Vec2 (2021)](https://jonathanbgn.com/2021/09/30/illustrated-wav2vec-2.html)
 - ⭐ [Whisper (2022)](https://arxiv.org/abs/2212.04356)
 - [Fast Conformer (2023)](https://arxiv.org/abs/2305.05084)
+- ⭐ [Zipformer: A Faster and Better Encoder for ASR (2023)](https://arxiv.org/abs/2310.11230) - U-Net-like encoder, ScaledAdam optimizer, faster & more memory-efficient than Conformer (ICLR 2024)
+- ⭐ [ChunkFormer: Masked Chunking Conformer for Long-Form Speech Transcription (2025)](https://arxiv.org/abs/2502.14673) - Chunk-wise processing, handles up to 16h audio on 80GB GPU, 3x faster batching vs Conformer (ICASSP 2025)
+- 🇻🇳 ⭐ [Gipformer: Efficient Vietnamese Speech Recognition (2026)](https://github.com/ggroup-ai-lab/gipformer) - 65M params, Zipformer Transducer (RNNT) architecture, SOTA on 9/12 Vietnamese ASR benchmarks, edge-deployable with ONNX & INT8 quantization
 - ⭐ [SpeechBrain ASR - Tutorial](https://speechbrain.readthedocs.io/en/latest/tutorials/tasks/speech-recognition-from-scratch.html)
 - [VLSP 2025 ASR - Twinkle Team (2025)](materials/asr_vlsp_2025_twinkle_team.pdf)
 
@@ -176,15 +179,20 @@ flowchart TD
 ### 🤯 Audio Language Models
 - ⭐ [Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale... (2023)](https://arxiv.org/abs/2311.07919)
 - [MiniCPM: Unveiling the Potential of Small Language Models with Scalable... (2024)](https://arxiv.org/abs/2404.06395)
+- ⭐ [Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming (2024)](https://arxiv.org/abs/2408.16725) - First fully end-to-end open-source model for real-time speech interaction
+- [EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions (2024)](https://arxiv.org/abs/2409.18042) - Omni-modal LLM with end-to-end speech + vision capabilities
 - ⭐ [CosyVoice: A Scalable Multilingual Zero-shot Text to Speech... (2024)](https://arxiv.org/abs/2407.05407)
 - [FunAudioLLM: Voice Understanding and Generation Foundation Models... (2024)](https://arxiv.org/html/2407.04051v1)
 - ⭐ [F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching (2024)](https://arxiv.org/abs/2410.06885)
 - ⭐ [Recent Advances in Speech Language Models: A Survey (2024)](https://arxiv.org/pdf/2410.03751)
 - [Audio-Language Models for Audio-Centric Tasks: A survey (2025)](https://arxiv.org/pdf/2501.15177)
 - [On The Landscape of Spoken Language Models: A Comprehensive Survey (2025)](https://arxiv.org/abs/2504.08528)
+- ⭐ [Kimi-Audio: Open-source Audio Foundation Model for Understanding, Generation and Conversation (2025)](https://arxiv.org/abs/2504.18425) - 13M+ hours training data, SOTA on ASR, audio QA, speech conversation
+- [LLaMA-Omni 2: LLM-based Real-time Spoken Chatbot with Streaming Speech Synthesis (2025)](https://arxiv.org/abs/2505.02625) - SpeechLM 0.5B–14B params, real-time speech interaction
 - [CosyVoice 3: Towards In-the-wild Speech Generation via Scaling-up and Post-training... (2025)](https://arxiv.org/abs/2505.17589)
 - [(SOTA) Qwen3-ASR: Supported 52 Languages Automatic Speech Recognition... (2026)](https://arxiv.org/abs/2512.03336)
 - [Qwen3-TTS: Multilingual, Streaming Text to Speech with Voice Cloning... (2026)](https://arxiv.org/abs/2601.15621)
+- ⭐ [(SOTA) OmniVoice: Towards Omnilingual Zero-Shot TTS with Diffusion Language Models (2026)](https://arxiv.org/abs/2604.00688) - 600+ languages, diffusion LM-style NAR, 581k-hour open-source dataset
 
 ---
 
