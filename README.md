@@ -1,5 +1,5 @@
 
-# 🥑 ROADMAP: AI Speech Engineer
+# 🐌 ROADMAP: AI Speech Engineer
 
 ![GitHub stars](https://img.shields.io/github/stars/leminhnguyen/ai-speech-engineer-roadmap?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/leminhnguyen/ai-speech-engineer-roadmap?style=social)
