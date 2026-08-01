@@ -1,16 +1,16 @@
-
 # 🐌 ROADMAP: AI Speech Engineer
 
 ![GitHub stars](https://img.shields.io/github/stars/leminhnguyen/ai-speech-engineer-roadmap?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/leminhnguyen/ai-speech-engineer-roadmap?style=social)
 ![GitHub last commit](https://img.shields.io/github/last-commit/leminhnguyen/ai-speech-engineer-roadmap)
 
-> A curated roadmap based on my 6 years of experience form zero to become a skilled AI Speech Engineer. 🚀👨‍💻  
+> A curated roadmap based on six years of experience, designed to help learners become skilled AI Speech Engineers. 🚀👨‍💻
+>
 > This roadmap covers everything from fundamentals to cutting-edge research trends in the speech domain.
 
 ---
 
-## �️ Roadmap Diagram
+## 🗺️ Roadmap Diagram
 
 ```mermaid
 flowchart TD
@@ -52,7 +52,7 @@ flowchart TD
 
 ---
 
-## �📅 Overview Timeline
+## 📅 Overview Timeline
 
 | Phase                        | Duration   | Focus Areas                               |
 |------------------------------|------------|-------------------------------------------|
@@ -63,51 +63,60 @@ flowchart TD
 
 ---
 
-## 🧠 #1 Foundations (3 months)
+## 🧠 1. Foundations (3 months)
 
-### 🔹Python Basic
+### 🔹 Python Basics
+
 - ⭐ 📺 [Python Tutorial for Beginners](https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
 
-### 🔹Machine Learning Basic
+### 🔹 Machine Learning Basics
+
 - ⭐ 📃 [Machine Learning Specialization (Free Course)](https://www.coursera.org/specializations/machine-learning-introduction)
 
-### 🔹Deeplearning Basic
+### 🔹 Deep Learning Basics
+
 - ⭐ 📺 [1. what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk)
 - ⭐ 📺 [2. Gradient descent, how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w)
 - ⭐ 📺 [3. Backpropagation, intuitively](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
 - ⭐ 📺 [4. Backpropagation calculus](https://www.youtube.com/watch?v=tIeHLnjs5U8)
 
-### 🔹Audio Signal Processing for ML
+### 🔹 Audio Signal Processing for ML
+
 - ⭐ 📺 [Learn all about speech concepts & features](https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0)
 
 ---
 
-## 💼 #2 Tools & Frameworks (3 months)
+## 💼 2. Tools & Frameworks (3 months)
 
 ### 🧰 Frameworks & Libraries
+
 - ⭐ `PyTorch` - Training models framework
 - ⭐ `librosa` - Audio preprocessing (STFT, MFCCs, etc.)
-- ⭐ `torchaudio`- Audio loading, transforms, and model wrappers
+- ⭐ `torchaudio` - Audio loading, transforms, and model wrappers
 - `ffmpeg`, `sox`, `pydub` - Audio conversion, slicing, format handling
 - `noisereduce` – Simple noise reduction from raw audio
 
 ### 🖥️ Tools
+
 - [Audacity](https://www.audacityteam.org/) - A free & powerful software for editing & visualizing audio
 - [Audacity Tutorial](https://www.youtube.com/watch?v=vlzOb4OLj94)
 
 ### 🤗 Hugging Face Course
-- ⭐ [Hugging Face Audio](https://huggingface.co/learn/audio-course/en/chapter1/audio_data) - Learn to tackle a range of audio-related tasks and gain experiments with speech datasets.
+
+- ⭐ [Hugging Face Audio](https://huggingface.co/learn/audio-course/en/chapter1/audio_data) - Learn to tackle a range of audio-related tasks and gain experience with speech datasets.
 
 ---
 
-## 🌱 #3 Dive Into Speech Core Technologies (12 months)
+## 🌱 3. Dive Into Speech Core Technologies (12 months)
 
-### 🤖 Transformers (Attention is all you need)
-- ⭐ [Original Paper (2017)](http://arxiv.org/abs/1706.03762)
+### 🤖 Transformers (Attention Is All You Need)
+
+- ⭐ [Original Paper (2017)](https://arxiv.org/abs/1706.03762)
 - ⭐ [Illustrated Transformer Blog](https://jalammar.github.io/illustrated-transformer/)
 - [Attention in transformers](https://www.youtube.com/watch?v=eMlx5fFNoYc)
 
 ### 🎙️ Automatic Speech Recognition (ASR)
+
 - ⭐ [Sequence Modeling With CTC (2017)](https://distill.pub/2017/ctc/)
 - [SpecAugment (2019)](https://blog.research.google/2019/04/specaugment-new-data-augmentation.html)
 - ⭐ [Wav2Vec2 (2020)](https://arxiv.org/abs/2005.08100)
@@ -122,6 +131,7 @@ flowchart TD
 - [VLSP 2025 ASR - Twinkle Team (2025)](materials/asr_vlsp_2025_twinkle_team.pdf)
 
 ### 🗣️ Text-to-Speech (TTS)
+
 - [HMM-based Vietnamese TTS (2016)](https://theses.hal.science/tel-01260884/document)
 - ⭐ [Wavenet: A Generative Model for Raw Audio (2016)](https://arxiv.org/abs/1609.03499)
 - ⭐ [Tacotron: Towards End-to-End Speech Synthesis (2017)](https://arxiv.org/abs/1703.10135)
@@ -136,11 +146,14 @@ flowchart TD
 - [Kokoro TTS: A cutting-edge model with 82M parameters, built on StyleTTS 2 architecture... (2024)](https://kokorottsai.com/)
 
 #### 🇻🇳 Vietnamese Resources
+
 - [Viphoneme](https://github.com/v-nhandt21/Viphoneme)
 - [Text2PhonemeSequence](https://github.com/thelinhbkhn2014/Text2PhonemeSequence)
 - [VLSP 2021 TTS - Navi Team (2021)](materials/vlsp_tts_2021_navi_team.pdf)
+
 ### 🔐 Speaker Verification (SV)
-- ⭐ [Speech Verification Introduction](https://maelfabien.github.io/machinelearning/Speech1/#)
+
+- ⭐ [Speaker Verification Introduction](https://maelfabien.github.io/machinelearning/Speech1/#)
 - ⭐ [X-vector Paper (2017)](https://danielpovey.com/files/2017_interspeech_embeddings.pdf)
 - [I-vector Paper (2018)](https://www.sciencedirect.com/science/article/pii/S1877050918314042/pdf)
 - ⭐ [VoxCeleb: a large-scale speaker identification dataset (2018)](https://arxiv.org/abs/1706.08612)
@@ -153,6 +166,7 @@ flowchart TD
 - [RedimNet: Reshape Dimensions Network for Speaker Recognition (2024)](https://arxiv.org/abs/2407.18223)
 
 ### 👥 Speaker Diarization (SD)
+
 - ⭐ [Speaker Diarization: An Introductory Overview (2023)](https://lajavaness.medium.com/speaker-diarization-an-introductory-overview-c070a3bfea70)
 - ⭐ [pyannote.audio: neural building blocks for speaker diarization (2019)](https://arxiv.org/abs/1911.01255)
 - ⭐ [A Review of Speaker Diarization: Recent Advances with Deep Learning (2021)](https://arxiv.org/abs/2101.09624)
@@ -164,6 +178,7 @@ flowchart TD
 - [(SOTA) Streaming Sortformer: Speaker Cache-Based Online... (2025)](https://arxiv.org/abs/2507.18446)
 
 ### 🎭 Voice Conversion (VC)
+
 - ⭐ [AutoVC: Zero-Shot Voice Style Transfer with Only Autoencoder Loss (2019)](https://arxiv.org/abs/1905.05879)
 - ⭐ [An Overview of Voice Conversion and its Challenges: From Statistical Modeling to Deep Learning (2020)](https://arxiv.org/abs/2008.03648)
 - [AGAIN-VC: A One-shot Voice Conversion using Activation Guidance and Adaptive Instance Normalization (2021)](https://arxiv.org/abs/2011.00316)
@@ -174,34 +189,70 @@ flowchart TD
 
 ---
 
-## 🔬 #4 Research Trends
+## 🔬 4. Research Trends
 
-### 🤯 Audio Language Models
-- ⭐ [Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale... (2023)](https://arxiv.org/abs/2311.07919)
-- [MiniCPM: Unveiling the Potential of Small Language Models with Scalable... (2024)](https://arxiv.org/abs/2404.06395)
-- ⭐ [Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming (2024)](https://arxiv.org/abs/2408.16725) - First fully end-to-end open-source model for real-time speech interaction
-- [EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions (2024)](https://arxiv.org/abs/2409.18042) - Omni-modal LLM with end-to-end speech + vision capabilities
-- ⭐ [CosyVoice: A Scalable Multilingual Zero-shot Text to Speech... (2024)](https://arxiv.org/abs/2407.05407)
-- [FunAudioLLM: Voice Understanding and Generation Foundation Models... (2024)](https://arxiv.org/html/2407.04051v1)
+> Updated August 2026. Research in this area moves quickly, and many recent works are preprints. Treat “SOTA” claims as benchmark-specific and verify the latest paper version, code, and evaluation setup.
+
+The field is moving from isolated speech tasks toward unified models that understand, reason over, and generate audio in real time. Start with the surveys, then follow the track most relevant to your work.
+
+### 🧭 Surveys & Taxonomies
+
+- ⭐ [Recent Advances in Speech Language Models: A Survey (2024)](https://arxiv.org/abs/2410.03751)
+- [Audio-Language Models for Audio-Centric Tasks: A Systematic Survey (2025)](https://arxiv.org/abs/2501.15177)
+- [On the Landscape of Spoken Language Models: A Comprehensive Survey (2025)](https://arxiv.org/abs/2504.08528)
+- ⭐ [Recent Advances in Discrete Speech Tokens: A Review (2025)](https://arxiv.org/abs/2502.06490)
+
+### 🔤 Speech Tokenization & Neural Codecs
+
+Discrete semantic and acoustic tokens are becoming the interface between waveforms and language models. Key problems include bitrate, reconstruction quality, semantic content, streaming, and generation efficiency.
+
+- ⭐ [WavTokenizer: An Efficient Acoustic Discrete Codec Tokenizer for Audio Language Modeling (2024)](https://arxiv.org/abs/2408.16532)
+- [BigCodec: Pushing the Limits of Low-Bitrate Neural Speech Codec (2024)](https://arxiv.org/abs/2409.05377)
+
+### 🎧 Audio Understanding & Reasoning
+
+This track extends speech recognition into general audio understanding, long-context listening, instruction following, and reasoning across speech, sound, and music.
+
+- ⭐ [Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models (2023)](https://arxiv.org/abs/2311.07919)
+- ⭐ [Kimi-Audio: An Open-Source Audio Foundation Model for Understanding, Generation, and Conversation (2025)](https://arxiv.org/abs/2504.18425)
+- ⭐ [Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio Language Models (2025)](https://arxiv.org/abs/2507.08128)
+- [Qwen3-ASR Technical Report (2026)](https://arxiv.org/abs/2601.21337)
+
+### 🗣️ Real-Time Spoken Dialogue & Omni Models
+
+The main direction is low-latency, end-to-end interaction that preserves paralinguistic information and can handle streaming input, interruptions, overlap, and natural turn-taking.
+
+- ⭐ [Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming (2024)](https://arxiv.org/abs/2408.16725)
+- [EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions (2024)](https://arxiv.org/abs/2409.18042)
+- [FunAudioLLM: Voice Understanding and Generation Foundation Models (2024)](https://arxiv.org/abs/2407.04051)
+- ⭐ [Moshi: A Speech-Text Foundation Model for Real-Time Dialogue (2024)](https://arxiv.org/abs/2410.00037)
+- ⭐ [Qwen2.5-Omni Technical Report (2025)](https://arxiv.org/abs/2503.20215)
+- [LLaMA-Omni 2: LLM-Based Real-Time Spoken Chatbot with Streaming Speech Synthesis (2025)](https://arxiv.org/abs/2505.02625)
+- ⭐ [Step-Audio 2 Technical Report (2025)](https://arxiv.org/abs/2507.16632)
+
+### 🎨 Speech Generation & Multilingual TTS
+
+Current work emphasizes zero-shot generation, multilingual coverage, controllability, streaming, diffusion or flow-based generation, and robust synthesis in real-world conditions.
+
+- ⭐ [CosyVoice: A Scalable Multilingual Zero-Shot Text-to-Speech Synthesizer (2024)](https://arxiv.org/abs/2407.05407)
 - ⭐ [F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching (2024)](https://arxiv.org/abs/2410.06885)
-- ⭐ [Recent Advances in Speech Language Models: A Survey (2024)](https://arxiv.org/pdf/2410.03751)
-- [Audio-Language Models for Audio-Centric Tasks: A survey (2025)](https://arxiv.org/pdf/2501.15177)
-- [On The Landscape of Spoken Language Models: A Comprehensive Survey (2025)](https://arxiv.org/abs/2504.08528)
-- ⭐ [Kimi-Audio: Open-source Audio Foundation Model for Understanding, Generation and Conversation (2025)](https://arxiv.org/abs/2504.18425) - 13M+ hours training data, SOTA on ASR, audio QA, speech conversation
-- [LLaMA-Omni 2: LLM-based Real-time Spoken Chatbot with Streaming Speech Synthesis (2025)](https://arxiv.org/abs/2505.02625) - SpeechLM 0.5B–14B params, real-time speech interaction
-- [CosyVoice 3: Towards In-the-wild Speech Generation via Scaling-up and Post-training... (2025)](https://arxiv.org/abs/2505.17589)
-- [(SOTA) Qwen3-ASR: Supported 52 Languages Automatic Speech Recognition... (2026)](https://arxiv.org/abs/2512.03336)
-- [Qwen3-TTS: Multilingual, Streaming Text to Speech with Voice Cloning... (2026)](https://arxiv.org/abs/2601.15621)
-- ⭐ [(SOTA) OmniVoice: Towards Omnilingual Zero-Shot TTS with Diffusion Language Models (2026)](https://arxiv.org/abs/2604.00688) - 600+ languages, diffusion LM-style NAR, 581k-hour open-source dataset
+- [CosyVoice 3: Towards In-the-Wild Speech Generation via Scaling-Up and Post-Training (2025)](https://arxiv.org/abs/2505.17589)
+- [Qwen3-TTS Technical Report (2026)](https://arxiv.org/abs/2601.15621)
+- ⭐ [OmniVoice: Towards Omnilingual Zero-Shot TTS with Diffusion Language Models (2026)](https://arxiv.org/abs/2604.00688)
+
+### 📏 Evaluation, Benchmarks & Data
+
+Modern evaluation goes beyond ASR accuracy and speech quality. It increasingly measures audio reasoning, paralinguistics, latency, interruption handling, backchanneling, and multi-speaker interaction.
+
+- ⭐ [VoiceBench: Benchmarking LLM-Based Voice Assistants (2024)](https://arxiv.org/abs/2410.17196)
+- [Full-Duplex-Bench v1.5: Evaluating Overlap Handling for Full-Duplex Speech Models (2025)](https://arxiv.org/abs/2507.23159)
+- [A Benchmark for Audio Reasoning Capabilities of Multimodal LLMs (ART, 2026)](https://arxiv.org/abs/2601.19673)
+- [WavBench: Benchmarking Reasoning, Colloquialism, and Paralinguistics (2026)](https://arxiv.org/abs/2602.12135)
+- ⭐ [HumDial-FDBench: Full-Duplex Interaction in Spoken Dialogue Systems (2026)](https://arxiv.org/abs/2604.21406)
+- [DuplexChat: Speaker-Separated Full-Duplex Dialogue Speech at Scale (2026)](https://arxiv.org/abs/2607.04941)
 
 ---
 
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
-
-```
-MIT License
-
-Copyright (c) 2026 Le Minh Nguyen
-```
