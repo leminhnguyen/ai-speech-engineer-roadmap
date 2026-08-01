@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">A sound wave becomes a sampled digital waveform</title>
+  <desc id="desc">A vibrating source creates air-pressure variation, a microphone converts it to voltage, and an ADC stores equally spaced samples.</desc>
+  <rect width="900" height="300" fill="#f7fafc"/>
+  <g font-family="Arial, sans-serif" fill="#183b56">
+    <text x="70" y="42" font-size="20" font-weight="bold">Vibration</text>
+    <text x="375" y="42" font-size="20" font-weight="bold">Continuous pressure</text>
+    <text x="680" y="42" font-size="20" font-weight="bold">Discrete samples</text>
+  </g>
+  <circle cx="122" cy="145" r="54" fill="#d9ecff" stroke="#2f6b9a" stroke-width="3"/>
+  <path d="M77 145q22-42 45 0t45 0" fill="none" stroke="#b45050" stroke-width="4"/>
+  <path d="M205 145h90" stroke="#607d8b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M330 145 C355 85 385 205 415 145 S475 85 505 145 S565 205 595 145" fill="none" stroke="#2f6b9a" stroke-width="4"/>
+  <path d="M610 145h55" stroke="#607d8b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M695 145 C720 85 750 205 780 145 S840 85 870 145" fill="none" stroke="#2f6b9a" stroke-width="3"/>
+  <g fill="#f4a261" stroke="#9a4f12" stroke-width="1"><circle cx="700" cy="129" r="5"/><circle cx="725" cy="88" r="5"/><circle cx="750" cy="136" r="5"/><circle cx="775" cy="195" r="5"/><circle cx="800" cy="166" r="5"/><circle cx="825" cy="100" r="5"/><circle cx="850" cy="104" r="5"/></g>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#40566b"><text x="70" y="235">speaker string / vocal folds</text><text x="382" y="235">amplitude changes over time</text><text x="704" y="235">numbers at regular intervals</text></g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#607d8b"/></marker></defs>
+</svg>

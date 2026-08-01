@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-labelledby="title desc">
+  <title id="title">Sampling and aliasing</title>
+  <desc id="desc">A continuous seven kilohertz wave is sampled by a ten kilohertz clock; the resulting points can also fit a three kilohertz wave.</desc>
+  <rect width="900" height="320" fill="#f7fafc"/>
+  <g font-family="Arial, sans-serif"><text x="45" y="42" font-size="22" fill="#183b56" font-weight="bold">Continuous signal</text><text x="350" y="42" font-size="22" fill="#183b56" font-weight="bold">Samples at 10 kHz</text><text x="660" y="42" font-size="22" fill="#183b56" font-weight="bold">Observed alias</text></g>
+  <path d="M35 160 C55 65 75 255 95 160 S135 65 155 160 S195 255 215 160 S255 65 275 160" fill="none" stroke="#2f6b9a" stroke-width="4"/>
+  <path d="M295 160h35" stroke="#607d8b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M350 160 C370 65 390 255 410 160 S450 65 470 160 S510 255 530 160 S570 65 590 160" fill="none" stroke="#2f6b9a" stroke-width="3" opacity=".45"/>
+  <g fill="#b45050"><circle cx="355" cy="104" r="6"/><circle cx="385" cy="221" r="6"/><circle cx="415" cy="104" r="6"/><circle cx="445" cy="221" r="6"/><circle cx="475" cy="104" r="6"/><circle cx="505" cy="221" r="6"/><circle cx="535" cy="104" r="6"/><circle cx="565" cy="221" r="6"/></g>
+  <path d="M610 160h35" stroke="#607d8b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M665 160 C705 80 745 240 785 160 S865 80 895 160" fill="none" stroke="#3f8f5c" stroke-width="4"/>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#40566b"><text x="52" y="284">7 kHz waveform</text><text x="367" y="284">Nyquist = 5 kHz</text><text x="690" y="284">looks like 3 kHz</text></g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#607d8b"/></marker></defs>
+</svg>

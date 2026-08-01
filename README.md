@@ -1,3 +1,27 @@
+# AI Speech Engineer — Foundations Tutorial
+
+> Learn the signal-processing foundations behind speech and audio ML by building each representation before using the production library equivalent.
+
+This repository is evolving from a curated roadmap into a hands-on tutorial. The first pilot phase is deliberately small: two independently runnable lessons with diagrams, reproducible plots, notebooks, and tests. The research roadmap below remains available while the rest of the curriculum is developed.
+
+## Start here
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+make audit test figures
+```
+
+| Lesson | Learn | Build |
+| --- | --- | --- |
+| [01 · Sound and Waveforms](curriculum/01-audio-signal-processing/01-sound-and-waveforms/docs/en.md) | amplitude, frequency, phase, waveform | synthesize, mix, inspect, and save WAV audio |
+| [02 · Digital Audio](curriculum/01-audio-signal-processing/02-digital-audio/docs/en.md) | sampling, Nyquist, aliasing, quantization | reproduce aliasing and PCM quantization with NumPy |
+
+Each lesson follows the same rhythm: explain the mental model, implement it with NumPy, validate the result, and then show the practical library workflow. See [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md) for the projects that informed the structure and topic sequence.
+
+---
+
 # 🐌 ROADMAP: AI Speech Engineer
 
 ![GitHub stars](https://img.shields.io/github/stars/leminhnguyen/ai-speech-engineer-roadmap?style=social)
