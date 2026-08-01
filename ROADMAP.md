@@ -2,6 +2,40 @@
 
 > A curated roadmap based on six years of experience, designed to help learners become skilled AI Speech Engineers. The repository pairs this reading roadmap with focused build tutorials where they add practical value.
 
+## Roadmap diagram (Mermaid)
+
+```mermaid
+flowchart TD
+    START([AI Speech Engineer Roadmap]):::title --> P1
+
+    subgraph P1[Foundations]
+        direction LR
+        A1[Python] ~~~ A2[ML] ~~~ A3[Deep Learning] ~~~ A4[Signal Processing]
+    end
+
+    P1 --> P2
+
+    subgraph P2[Tools and Frameworks]
+        direction LR
+        B1[PyTorch] ~~~ B2[librosa / torchaudio] ~~~ B3[Audio tools] ~~~ B4[Hugging Face]
+    end
+
+    P2 --> P3
+
+    subgraph P3[Speech Core Technologies]
+        direction LR
+        C1[ASR] ~~~ C2[TTS] ~~~ C3[Voice Conversion] ~~~ C4[Speaker Recognition]
+    end
+
+    P3 --> P4[Research Trends: Audio LMs, Multimodal, SOTA]
+
+    classDef title fill:#1a5276,color:#fff,stroke:#1a5276,font-size:16px
+    style P1 fill:#dae8fc,stroke:#6c8ebf
+    style P2 fill:#fff2cc,stroke:#d6b656
+    style P3 fill:#f3e5f5,stroke:#9c27b0
+    style P4 fill:#fce4ec,stroke:#e91e63
+```
+
 ## Timeline
 
 | Phase | Duration | Focus |
