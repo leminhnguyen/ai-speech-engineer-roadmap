@@ -88,14 +88,16 @@ flowchart TD
 
 This topic has a build-it-yourself tutorial track. Each lesson introduces the mental model, implements it with NumPy, and then compares it with the practical library workflow.
 
-**Tutorial progress: 2 of 12 lessons**
+**Tutorial progress: 4 of 12 lessons**
 
 | Status | Lesson | Core outcome |
 | --- | --- | --- |
 | ✅ | [01 · Sound and Waveforms](curriculum/01-audio-signal-processing/01-sound-and-waveforms/docs/en.md) | Synthesize, mix, inspect, and save PCM WAV audio. |
 | ✅ | [02 · Digital Audio](curriculum/01-audio-signal-processing/02-digital-audio/docs/en.md) | Explain sampling and aliasing; reproduce PCM quantization. |
-| 🔜 | Time-Domain Features | Build amplitude envelope, RMS energy, and zero-crossing rate. |
-| 📝 | Fourier to MFCC | Progress from spectra and STFT to mel features and MFCCs. |
+| ✅ | [03 · Time-Domain Features](curriculum/01-audio-signal-processing/03-time-domain-features/docs/en.md) | Frame a signal; compute amplitude envelope, RMS energy, and zero-crossing rate. |
+| ✅ | [04 · The Discrete Fourier Transform](curriculum/01-audio-signal-processing/04-discrete-fourier-transform/docs/en.md) | Build the DFT from its definition; read spectra and spectral leakage. |
+| 🔜 | Short-Time Fourier Transform | Windowing, STFT, and spectrograms. |
+| 📝 | Mel Spectrograms and MFCCs | Mel filterbanks, log compression, and cepstral coefficients. |
 
 Run completed tutorials locally:
 

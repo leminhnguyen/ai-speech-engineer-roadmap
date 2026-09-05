@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">The DFT compares a signal with every candidate frequency and reports how much of each is present</title>
+  <desc id="desc">A mixed waveform on the left is correlated with a bank of reference sinusoids of increasing frequency in the middle. Each comparison yields one complex number whose magnitude becomes one bar of the spectrum on the right. Two reference frequencies match and produce tall bars; the others produce nearly nothing.</desc>
+  <rect width="900" height="300" fill="#f7fafc"/>
+  <g font-family="Arial, sans-serif" fill="#183b56" font-size="20" font-weight="bold">
+    <text x="40" y="38">Signal x[n]</text>
+    <text x="330" y="38">Compare with e^(-2πikn/N)</text>
+    <text x="700" y="38">Spectrum |X[k]|</text>
+  </g>
+  <path d="M40 150 C48 110 56 190 64 150 S80 100 88 150 S104 200 112 150 S128 120 136 150 S152 180 160 150 S176 105 184 150 S200 195 208 150 S224 125 232 150 S248 175 256 150" fill="none" stroke="#2f6b9a" stroke-width="3"/>
+  <path d="M275 150 h40" stroke="#607d8b" stroke-width="4" marker-end="url(#arrow)"/>
+  <g fill="none" stroke-width="2.5">
+    <path d="M340 80 C365 60 390 100 415 80 S465 60 490 80 S540 100 565 80" stroke="#b0b8c1"/>
+    <path d="M340 125 C352 105 364 145 376 125 S400 105 412 125 S436 145 448 125 S472 105 484 125 S508 145 520 125 S544 105 556 125 S568 135 565 125" stroke="#b45050"/>
+    <path d="M340 170 C347 155 354 185 361 170 S375 155 382 170 S396 185 403 170 S417 155 424 170 S438 185 445 170 S459 155 466 170 S480 185 487 170 S501 155 508 170 S522 185 529 170 S543 155 550 170 S562 180 565 170" stroke="#b0b8c1"/>
+    <path d="M340 215 C344 205 348 225 352 215 S360 205 364 215 S372 225 376 215 S384 205 388 215 S396 225 400 215 S408 205 412 215 S420 225 424 215 S432 205 436 215 S444 225 448 215 S456 205 460 215 S468 225 472 215 S480 205 484 215 S492 225 496 215 S504 205 508 215 S516 225 520 215 S528 205 532 215 S540 225 544 215 S552 205 556 215 S562 222 565 215" stroke="#3f8f5c"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#40566b">
+    <text x="575" y="84">k = 1</text>
+    <text x="575" y="129">k = 2</text>
+    <text x="575" y="174">k = 3</text>
+    <text x="575" y="219">k = 4</text>
+    <text x="340" y="250">multiply, then sum over n</text>
+  </g>
+  <path d="M630 150 h40" stroke="#607d8b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M700 230 h170" stroke="#607d8b" stroke-width="2"/>
+  <path d="M700 230 v-150" stroke="#607d8b" stroke-width="2"/>
+  <g stroke-width="1">
+    <rect x="712" y="222" width="22" height="8" fill="#d0d7de" stroke="#9aa5b1"/>
+    <rect x="746" y="120" width="22" height="110" fill="#b45050" stroke="#7a2f2f"/>
+    <rect x="780" y="224" width="22" height="6" fill="#d0d7de" stroke="#9aa5b1"/>
+    <rect x="814" y="160" width="22" height="70" fill="#3f8f5c" stroke="#2c6a43"/>
+    <rect x="848" y="226" width="22" height="4" fill="#d0d7de" stroke="#9aa5b1"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#40566b">
+    <text x="718" y="250">1</text><text x="752" y="250">2</text><text x="786" y="250">3</text><text x="820" y="250">4</text><text x="854" y="250">5</text>
+    <text x="700" y="275">bin k  →  f = k · sr / N</text>
+  </g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#607d8b"/></marker></defs>
+</svg>

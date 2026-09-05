@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">A waveform is cut into overlapping frames and each frame becomes one feature value</title>
+  <desc id="desc">A long waveform is split into short windows that overlap by half their length. For every window one number is computed, such as peak amplitude, RMS energy, or zero-crossing rate, producing a shorter sequence of feature values.</desc>
+  <rect width="900" height="300" fill="#f7fafc"/>
+  <g font-family="Arial, sans-serif" fill="#183b56">
+    <text x="40" y="38" font-size="20" font-weight="bold">Waveform (samples)</text>
+    <text x="40" y="168" font-size="20" font-weight="bold">Frames (frame_length, hop_length)</text>
+    <text x="640" y="38" font-size="20" font-weight="bold">One value per frame</text>
+  </g>
+  <path d="M40 95 C55 60 70 130 85 95 S115 60 130 95 S160 130 175 95 S205 60 220 95 S250 130 265 95 S295 60 310 95 S340 130 355 95 S385 60 400 95 S430 130 445 95 S475 60 490 95 S520 130 535 95 S565 60 580 95" fill="none" stroke="#2f6b9a" stroke-width="3"/>
+  <g stroke-width="2">
+    <rect x="40" y="185" width="160" height="34" fill="#d9ecff" stroke="#2f6b9a" rx="4"/>
+    <rect x="120" y="225" width="160" height="34" fill="#fff2cc" stroke="#d6b656" rx="4"/>
+    <rect x="200" y="185" width="160" height="34" fill="#d9ecff" stroke="#2f6b9a" rx="4"/>
+    <rect x="280" y="225" width="160" height="34" fill="#fff2cc" stroke="#d6b656" rx="4"/>
+    <rect x="360" y="185" width="160" height="34" fill="#d9ecff" stroke="#2f6b9a" rx="4"/>
+    <rect x="440" y="225" width="140" height="34" fill="#fff2cc" stroke="#d6b656" rx="4" stroke-dasharray="5 4"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#40566b">
+    <text x="48" y="208">frame 0</text>
+    <text x="128" y="248">frame 1</text>
+    <text x="208" y="208">frame 2</text>
+    <text x="288" y="248">frame 3</text>
+    <text x="368" y="208">frame 4</text>
+    <text x="448" y="248">frame 5 (zero-padded)</text>
+  </g>
+  <path d="M40 130 v40" stroke="#607d8b" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M120 130 v40" stroke="#607d8b" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M60 140 h50" stroke="#607d8b" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="42" y="158" font-family="Arial, sans-serif" font-size="13" fill="#40566b">hop</text>
+  <path d="M595 215 h35" stroke="#607d8b" stroke-width="4" marker-end="url(#arrow)"/>
+  <g fill="#f4a261" stroke="#9a4f12" stroke-width="1">
+    <rect x="650" y="150" width="30" height="70"/>
+    <rect x="690" y="130" width="30" height="90"/>
+    <rect x="730" y="175" width="30" height="45"/>
+    <rect x="770" y="205" width="30" height="15"/>
+    <rect x="810" y="160" width="30" height="60"/>
+    <rect x="850" y="185" width="30" height="35"/>
+  </g>
+  <path d="M645 220 h240" stroke="#607d8b" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#40566b">
+    <text x="640" y="70">peak, RMS, or ZCR</text>
+    <text x="640" y="250">frame index (time)</text>
+  </g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#607d8b"/></marker></defs>
+</svg>

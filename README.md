@@ -62,7 +62,7 @@ Durations are guidelines, not deadlines. Move on when you can explain the core i
 
 ## 🛠️ Hands-on Tutorial Track
 
-![Progress](https://img.shields.io/badge/progress-2%20%2F%2012%20lessons-orange)
+![Progress](https://img.shields.io/badge/progress-4%20%2F%2012%20lessons-orange)
 
 Every lesson follows the same learning loop: **understand → build with NumPy → validate → compare with the library → practice.**
 
@@ -70,8 +70,10 @@ Every lesson follows the same learning loop: **understand → build with NumPy �
 | :---: | --- | :---: | --- |
 | ✅ | [01 · Sound and Waveforms](curriculum/01-audio-signal-processing/01-sound-and-waveforms/docs/en.md) | ~45 min | Generate and mix tones, inspect spectra, and round-trip PCM16 WAV audio. |
 | ✅ | [02 · Digital Audio](curriculum/01-audio-signal-processing/02-digital-audio/docs/en.md) | ~50 min | Reproduce sampling, aliasing, resampling pitfalls, and PCM quantization. |
-| 🚧 | 03 · Time-Domain Features | — | Amplitude envelope, RMS energy, and zero-crossing rate. |
-| 📝 | 04 · Fourier to MFCC | — | Spectra, STFT, mel filterbanks, and MFCCs. |
+| ✅ | [03 · Time-Domain Features](curriculum/01-audio-signal-processing/03-time-domain-features/docs/en.md) | ~50 min | Frame a signal and compute amplitude envelope, RMS energy, and zero-crossing rate. |
+| ✅ | [04 · The Discrete Fourier Transform](curriculum/01-audio-signal-processing/04-discrete-fourier-transform/docs/en.md) | ~60 min | Implement the DFT from its definition, read a spectrum, and explain spectral leakage. |
+| 🚧 | 05 · Short-Time Fourier Transform | — | Windowing, STFT, and spectrograms. |
+| 📝 | 06 · Mel Spectrograms and MFCCs | — | Mel filterbanks, log compression, and cepstral coefficients. |
 
 <details>
 <summary><b>What is inside each lesson?</b></summary>
