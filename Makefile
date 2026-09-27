@@ -1,5 +1,5 @@
 PYTHON ?= python3
-LESSONS := curriculum/01-audio-signal-processing/01-sound-and-waveforms curriculum/01-audio-signal-processing/02-digital-audio curriculum/01-audio-signal-processing/03-time-domain-features curriculum/01-audio-signal-processing/04-discrete-fourier-transform
+LESSONS := curriculum/01-audio-signal-processing/01-sound-and-waveforms curriculum/01-audio-signal-processing/02-digital-audio curriculum/01-audio-signal-processing/03-time-domain-features curriculum/01-audio-signal-processing/04-discrete-fourier-transform curriculum/01-audio-signal-processing/05-short-time-fourier-transform curriculum/01-audio-signal-processing/06-mel-spectrograms-and-mfccs
 
 .PHONY: audit test figures notebooks
 

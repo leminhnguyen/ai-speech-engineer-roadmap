@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">The STFT windows overlapping frames, transforms each one, and stacks the spectra into a spectrogram</title>
+  <desc id="desc">On the left, a waveform whose frequency rises over time is covered by three overlapping bell-shaped Hann windows spaced one hop apart. In the middle, each windowed frame tapers to zero at its edges and passes through an FFT. On the right, each FFT becomes one column of a spectrogram grid whose bright cell moves upward from left to right, tracking the rising frequency.</desc>
+  <rect width="900" height="300" fill="#f7fafc"/>
+  <g font-family="Arial, sans-serif" fill="#183b56" font-size="20" font-weight="bold">
+    <text x="40" y="38">Window each frame</text>
+    <text x="345" y="38">FFT each frame</text>
+    <text x="640" y="38">Stack into columns</text>
+  </g>
+  <path d="M40 160 C55 120 70 200 85 160 S110 125 122 160 S144 195 154 160 S172 130 180 160 S196 190 203 160 S216 135 222 160 S234 185 239 160 S249 140 253 160 S262 180 265 160 S272 145 275 160" fill="none" stroke="#2f6b9a" stroke-width="2.5"/>
+  <g fill="none" stroke-width="2.5">
+    <path d="M40 215 C70 215 80 100 110 100 S150 215 180 215" stroke="#b45050"/>
+    <path d="M90 215 C120 215 130 100 160 100 S200 215 230 215" stroke="#3f8f5c"/>
+    <path d="M140 215 C170 215 180 100 210 100 S250 215 280 215" stroke="#c28a2c"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#40566b">
+    <path d="M110 240 h50" stroke="#607d8b" stroke-width="2"/>
+    <text x="112" y="258">hop</text>
+    <path d="M40 270 h140" stroke="#b45050" stroke-width="2"/>
+    <text x="70" y="288">n_fft samples</text>
+  </g>
+  <path d="M290 160 h40" stroke="#607d8b" stroke-width="4" marker-end="url(#arrow)"/>
+  <g fill="none" stroke-width="2">
+    <path d="M345 95 C355 95 360 75 370 70 S385 120 395 70 S410 115 420 95" stroke="#b45050"/>
+    <path d="M345 160 C355 160 360 135 368 132 S380 185 388 132 S400 180 410 135 S420 160 420 160" stroke="#3f8f5c"/>
+    <path d="M345 225 C352 225 356 205 362 200 S370 245 376 200 S384 245 390 200 S398 245 404 205 S414 225 420 225" stroke="#c28a2c"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#183b56" font-weight="bold">
+    <rect x="455" y="78" width="70" height="34" rx="6" fill="#e3edf5" stroke="#2f6b9a"/><text x="475" y="100">FFT</text>
+    <rect x="455" y="143" width="70" height="34" rx="6" fill="#e3edf5" stroke="#2f6b9a"/><text x="475" y="165">FFT</text>
+    <rect x="455" y="208" width="70" height="34" rx="6" fill="#e3edf5" stroke="#2f6b9a"/><text x="475" y="230">FFT</text>
+  </g>
+  <g stroke="#607d8b" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M425 95 h25"/><path d="M425 160 h25"/><path d="M425 225 h25"/>
+    <path d="M535 160 h90"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="1">
+    <rect x="640" y="60" width="35" height="170" fill="#2b1d3a"/>
+    <rect x="675" y="60" width="35" height="170" fill="#2b1d3a"/>
+    <rect x="710" y="60" width="35" height="170" fill="#2b1d3a"/>
+    <rect x="642" y="232" width="31" height="5" fill="#b45050" stroke="none"/>
+    <rect x="677" y="232" width="31" height="5" fill="#3f8f5c" stroke="none"/>
+    <rect x="712" y="232" width="31" height="5" fill="#c28a2c" stroke="none"/>
+    <rect x="745" y="60" width="35" height="170" fill="#2b1d3a"/>
+    <rect x="780" y="60" width="35" height="170" fill="#2b1d3a"/>
+    <rect x="640" y="200" width="35" height="20" fill="#f6c667"/>
+    <rect x="675" y="170" width="35" height="20" fill="#f6c667"/>
+    <rect x="710" y="140" width="35" height="20" fill="#f6c667"/>
+    <rect x="745" y="110" width="35" height="20" fill="#f6c667"/>
+    <rect x="780" y="80" width="35" height="20" fill="#f6c667"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#40566b">
+    <text x="640" y="256">time (frame t) →</text>
+    <text x="545" y="150">one column</text>
+    <text x="545" y="182">per frame</text>
+    <text x="826" y="80">high f</text>
+    <text x="826" y="225">low f</text>
+    <text x="640" y="280">|X[k, t]|² = spectrogram</text>
+  </g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#607d8b"/></marker></defs>
+</svg>

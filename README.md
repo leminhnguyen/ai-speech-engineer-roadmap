@@ -62,7 +62,7 @@ Durations are guidelines, not deadlines. Move on when you can explain the core i
 
 ## 🛠️ Hands-on Tutorial Track
 
-![Progress](https://img.shields.io/badge/progress-4%20%2F%2012%20lessons-orange)
+![Progress](https://img.shields.io/badge/progress-6%20%2F%2012%20lessons-orange)
 
 Every lesson follows the same learning loop: **understand → build with NumPy → validate → compare with the library → practice.**
 
@@ -72,8 +72,8 @@ Every lesson follows the same learning loop: **understand → build with NumPy �
 | ✅ | [02 · Digital Audio](curriculum/01-audio-signal-processing/02-digital-audio/docs/en.md) | ~50 min | Reproduce sampling, aliasing, resampling pitfalls, and PCM quantization. |
 | ✅ | [03 · Time-Domain Features](curriculum/01-audio-signal-processing/03-time-domain-features/docs/en.md) | ~50 min | Frame a signal and compute amplitude envelope, RMS energy, and zero-crossing rate. |
 | ✅ | [04 · The Discrete Fourier Transform](curriculum/01-audio-signal-processing/04-discrete-fourier-transform/docs/en.md) | ~60 min | Implement the DFT from its definition, read a spectrum, and explain spectral leakage. |
-| 🚧 | 05 · Short-Time Fourier Transform | — | Windowing, STFT, and spectrograms. |
-| 📝 | 06 · Mel Spectrograms and MFCCs | — | Mel filterbanks, log compression, and cepstral coefficients. |
+| ✅ | [05 · The Short-Time Fourier Transform](curriculum/01-audio-signal-processing/05-short-time-fourier-transform/docs/en.md) | ~60 min | Window frames, build the STFT and its inverse, and explore the time-frequency trade-off. |
+| ✅ | [06 · Mel Spectrograms and MFCCs](curriculum/01-audio-signal-processing/06-mel-spectrograms-and-mfccs/docs/en.md) | ~70 min | Build a mel filterbank, log-mel spectrograms, and MFCCs, and show they track the vowel, not the pitch. |
 
 <details>
 <summary><b>What is inside each lesson?</b></summary>

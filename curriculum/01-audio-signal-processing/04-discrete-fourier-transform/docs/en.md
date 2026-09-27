@@ -87,7 +87,7 @@ The DFT assumes the $N$ samples repeat forever. A 440 Hz tone over 0.25 s comple
 
 ![An on-bin 440 Hz tone is a single spike, while a 442 Hz tone spreads across many neighbouring bins with a lower peak.](../assets/generated/spectral-leakage.png)
 
-The peak drops from 0.5 to about 0.32 and spreads across the neighbours. Nothing is wrong with the transform; the signal simply does not fit the analysis length. Real audio never does, which is why the next lesson multiplies each frame by a window before transforming it.
+The peak drops from 0.5 to about 0.32 and spreads across the neighbours. Nothing is wrong with the transform; the signal simply does not fit the analysis length. Real audio never does, which is why [the next lesson](../../05-short-time-fourier-transform/docs/en.md) multiplies each frame by a window before transforming it.
 
 ## Use It in Practice
 

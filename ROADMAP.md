@@ -88,7 +88,7 @@ flowchart TD
 
 This topic has a build-it-yourself tutorial track. Each lesson introduces the mental model, implements it with NumPy, and then compares it with the practical library workflow.
 
-**Tutorial progress: 4 of 12 lessons**
+**Tutorial progress: 6 of 12 lessons**
 
 | Status | Lesson | Core outcome |
 | --- | --- | --- |
@@ -96,8 +96,8 @@ This topic has a build-it-yourself tutorial track. Each lesson introduces the me
 | ✅ | [02 · Digital Audio](curriculum/01-audio-signal-processing/02-digital-audio/docs/en.md) | Explain sampling and aliasing; reproduce PCM quantization. |
 | ✅ | [03 · Time-Domain Features](curriculum/01-audio-signal-processing/03-time-domain-features/docs/en.md) | Frame a signal; compute amplitude envelope, RMS energy, and zero-crossing rate. |
 | ✅ | [04 · The Discrete Fourier Transform](curriculum/01-audio-signal-processing/04-discrete-fourier-transform/docs/en.md) | Build the DFT from its definition; read spectra and spectral leakage. |
-| 🔜 | Short-Time Fourier Transform | Windowing, STFT, and spectrograms. |
-| 📝 | Mel Spectrograms and MFCCs | Mel filterbanks, log compression, and cepstral coefficients. |
+| ✅ | [05 · The Short-Time Fourier Transform](curriculum/01-audio-signal-processing/05-short-time-fourier-transform/docs/en.md) | Window frames, build the STFT and spectrograms, and invert them with overlap-add. |
+| ✅ | [06 · Mel Spectrograms and MFCCs](curriculum/01-audio-signal-processing/06-mel-spectrograms-and-mfccs/docs/en.md) | Build mel filterbanks, log-mel spectrograms, and MFCCs from scratch. |
 
 Run completed tutorials locally:
 

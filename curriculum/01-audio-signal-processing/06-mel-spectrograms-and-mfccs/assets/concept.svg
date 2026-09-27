@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">From a power spectrum to MFCCs: mel filters, a logarithm, and a DCT</title>
+  <desc id="desc">Four panels joined by arrows. First, a jagged power spectrum with many harmonic peaks and 257 bins. Second, triangular filters that are narrow at low frequencies and wide at high frequencies sum the bins into 40 mel bands. Third, the logarithm turns the band energies into a smooth decibel envelope with two formant bumps. Fourth, a discrete cosine transform summarises that envelope as 13 coefficients, with the first few bars large and later bars small.</desc>
+  <rect width="900" height="300" fill="#f7fafc"/>
+  <g font-family="Arial, sans-serif" fill="#183b56" font-size="18" font-weight="bold">
+    <text x="30" y="38">|STFT|² frame</text>
+    <text x="250" y="38">Mel filterbank</text>
+    <text x="480" y="38">log</text>
+    <text x="690" y="38">DCT → MFCC</text>
+  </g>
+  <g stroke="#607d8b" stroke-width="2" fill="none">
+    <path d="M30 230 h180"/><path d="M250 230 h180"/><path d="M480 230 h170"/><path d="M690 230 h180"/>
+  </g>
+  <path d="M30 228 L38 150 L44 226 L50 118 L56 226 L62 100 L68 224 L74 128 L80 226 L86 170 L92 226 L98 200 L104 226 L110 150 L116 226 L122 135 L128 226 L134 175 L140 227 L146 205 L152 227 L158 212 L164 228 L170 216 L176 228 L182 220 L188 228 L194 222 L200 229 L206 224" fill="none" stroke="#9aa5b1" stroke-width="1.6"/>
+  <text x="30" y="255" font-family="Arial, sans-serif" font-size="13" fill="#40566b">257 bins, harmonics visible</text>
+  <path d="M215 150 h28" stroke="#607d8b" stroke-width="3" marker-end="url(#arrow)"/>
+  <g fill="none" stroke-width="2">
+    <path d="M250 230 L258 110 L266 230" stroke="#3b528b"/>
+    <path d="M258 230 L270 110 L282 230" stroke="#31688e"/>
+    <path d="M270 230 L288 110 L306 230" stroke="#26828e"/>
+    <path d="M288 230 L314 110 L340 230" stroke="#1f9e89"/>
+    <path d="M314 230 L350 110 L386 230" stroke="#35b779"/>
+    <path d="M350 230 L392 110 L430 230" stroke="#90d743"/>
+  </g>
+  <text x="250" y="255" font-family="Arial, sans-serif" font-size="13" fill="#40566b">narrow low, wide high → 40 bands</text>
+  <path d="M440 150 h32" stroke="#607d8b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M480 190 C495 150 505 95 520 100 S540 140 550 150 S575 110 590 120 S620 180 650 200" fill="none" stroke="#b45050" stroke-width="3"/>
+  <g fill="#b45050">
+    <circle cx="480" cy="190" r="3"/><circle cx="500" cy="130" r="3"/><circle cx="520" cy="100" r="3"/><circle cx="540" cy="138" r="3"/>
+    <circle cx="560" cy="140" r="3"/><circle cx="580" cy="114" r="3"/><circle cx="600" cy="130" r="3"/><circle cx="625" cy="175" r="3"/><circle cx="650" cy="200" r="3"/>
+  </g>
+  <text x="480" y="255" font-family="Arial, sans-serif" font-size="13" fill="#40566b">smooth envelope in dB</text>
+  <path d="M655 150 h28" stroke="#607d8b" stroke-width="3" marker-end="url(#arrow)"/>
+  <g stroke="#2c6a43" stroke-width="1">
+    <rect x="694" y="80" width="10" height="150" fill="#3f8f5c"/>
+    <rect x="708" y="150" width="10" height="80" fill="#3f8f5c"/>
+    <rect x="722" y="120" width="10" height="110" fill="#3f8f5c"/>
+    <rect x="736" y="175" width="10" height="55" fill="#3f8f5c"/>
+    <rect x="750" y="195" width="10" height="35" fill="#7fb896"/>
+    <rect x="764" y="205" width="10" height="25" fill="#7fb896"/>
+    <rect x="778" y="212" width="10" height="18" fill="#7fb896"/>
+    <rect x="792" y="218" width="10" height="12" fill="#7fb896"/>
+    <rect x="806" y="220" width="10" height="10" fill="#b9d8c5"/>
+    <rect x="820" y="222" width="10" height="8" fill="#b9d8c5"/>
+    <rect x="834" y="224" width="10" height="6" fill="#b9d8c5"/>
+    <rect x="848" y="225" width="10" height="5" fill="#b9d8c5"/>
+    <rect x="862" y="226" width="8" height="4" fill="#b9d8c5"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#40566b">
+    <text x="690" y="255">13 coefficients: c0 … c12</text>
+    <text x="690" y="275">c0 = loudness, c1+ = shape</text>
+  </g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#607d8b"/></marker></defs>
+</svg>
