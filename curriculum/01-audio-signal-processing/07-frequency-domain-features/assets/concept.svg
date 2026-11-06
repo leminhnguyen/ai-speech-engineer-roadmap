@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">Four ways to summarise one spectrum frame with a single number</title>
+  <desc id="desc">Four panels show the same spectrum, a tall hump at low frequencies with a long tail toward high frequencies. First, band energy ratio: a vertical split line divides the area into a large low band and a small high band, and the ratio is low over high. Second, spectral centroid: a pointer marks the balance point of the area, its centre of mass in hertz. Third, spectral bandwidth: a horizontal double arrow around the centroid shows how widely the energy spreads. Fourth, spectral rolloff: the area is shaded from zero up to the frequency where 85 percent of it has accumulated.</desc>
+  <rect width="900" height="300" fill="#f7fafc"/>
+  <defs>
+    <path id="spectrum" d="M0 0 L0 -40 C10 -70 20 -125 35 -125 S55 -80 70 -70 S100 -60 120 -40 S160 -15 190 -8 L190 0 Z"/>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#183b56"/></marker>
+    <marker id="arrow-start" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto"><path d="M9,0 L9,6 L0,3 z" fill="#183b56"/></marker>
+    <clipPath id="low-band"><rect x="0" y="-140" width="60" height="140"/></clipPath>
+    <clipPath id="high-band"><rect x="60" y="-140" width="140" height="140"/></clipPath>
+    <clipPath id="rolloff-band"><rect x="0" y="-140" width="128" height="140"/></clipPath>
+  </defs>
+  <g font-family="Arial, sans-serif" fill="#183b56" font-size="17" font-weight="bold">
+    <text x="25" y="38">Band energy ratio</text>
+    <text x="250" y="38">Spectral centroid</text>
+    <text x="470" y="38">Spectral bandwidth</text>
+    <text x="690" y="38">Spectral rolloff</text>
+  </g>
+  <!-- 1. Band energy ratio -->
+  <g transform="translate(25 225)">
+    <use href="#spectrum" fill="#2f6b9a" clip-path="url(#low-band)" opacity="0.75"/>
+    <use href="#spectrum" fill="#e0a070" clip-path="url(#high-band)" opacity="0.85"/>
+    <path d="M0 0 h195" stroke="#607d8b" stroke-width="2"/>
+    <path d="M60 8 V-135" stroke="#183b56" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="64" y="-122" font-family="Arial, sans-serif" font-size="12" fill="#183b56">split</text>
+    <text x="10" y="-50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">low</text>
+    <text x="120" y="-40" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#8a4a1c">high</text>
+  </g>
+  <!-- 2. Centroid -->
+  <g transform="translate(250 225)">
+    <use href="#spectrum" fill="#9fbcd4"/>
+    <path d="M0 0 h195" stroke="#607d8b" stroke-width="2"/>
+    <path d="M58 -138 V-6" stroke="#183b56" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <path d="M46 12 L58 0 L70 12 Z" fill="#183b56"/>
+    <text x="66" y="-122" font-family="Arial, sans-serif" font-size="12" fill="#183b56">balance point</text>
+  </g>
+  <!-- 3. Bandwidth -->
+  <g transform="translate(470 225)">
+    <use href="#spectrum" fill="#9fbcd4"/>
+    <path d="M0 0 h195" stroke="#607d8b" stroke-width="2"/>
+    <path d="M58 -132 V0" stroke="#183b56" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <path d="M12 -100 H104" stroke="#183b56" stroke-width="2.5" marker-start="url(#arrow-start)" marker-end="url(#arrow)"/>
+    <text x="68" y="-108" font-family="Arial, sans-serif" font-size="12" fill="#183b56">spread</text>
+  </g>
+  <!-- 4. Rolloff -->
+  <g transform="translate(690 225)">
+    <use href="#spectrum" fill="#d6e2ec"/>
+    <use href="#spectrum" fill="#3f8f5c" clip-path="url(#rolloff-band)" opacity="0.8"/>
+    <path d="M0 0 h195" stroke="#607d8b" stroke-width="2"/>
+    <path d="M128 8 V-135" stroke="#b45050" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="24" y="-40" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">85%</text>
+    <text x="134" y="-122" font-family="Arial, sans-serif" font-size="12" fill="#b45050">rolloff</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#40566b">
+    <text x="25" y="255">low ÷ high energy</text>
+    <text x="250" y="255">mean frequency, in Hz</text>
+    <text x="470" y="255">std. dev. around centroid</text>
+    <text x="690" y="255">85% of energy lies below</text>
+    <text x="25" y="280">frequency →</text>
+  </g>
+</svg>

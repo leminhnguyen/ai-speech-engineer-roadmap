@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">Pitch from self-similarity: shift, compare, find the first good match</title>
+  <desc id="desc">Three panels joined by arrows. First, a periodic voiced waveform with a copy of itself shifted right by a lag tau; when tau equals one period the two copies line up. Second, the YIN difference curve plotted against lag: it starts at 1, falls into a deep dip at one period T, and dips again at 2T and 3T, with a dashed threshold line near zero. Third, the first dip below the threshold is chosen, giving the period T in samples and the pitch as sample rate divided by T; a noisy frame never dips below the line and is marked unvoiced.</desc>
+  <rect width="900" height="300" fill="#f7fafc"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#607d8b"/></marker>
+    <path id="wave" d="M0 0 c8 -40 14 -40 18 -10 c4 20 10 -8 14 4 c4 12 10 10 18 6 c8 -40 14 -40 18 -10 c4 20 10 -8 14 4 c4 12 10 10 18 6 c8 -40 14 -40 18 -10 c4 20 10 -8 14 4 c4 12 10 10 18 6 c8 -40 14 -40 18 -10 c4 20 10 -8 14 4 c4 12 10 10 18 6" fill="none" stroke-width="2.2"/>
+  </defs>
+  <g font-family="Arial, sans-serif" fill="#183b56" font-size="18" font-weight="bold">
+    <text x="30" y="38">Shift and compare</text>
+    <text x="345" y="38">Difference vs. lag</text>
+    <text x="660" y="38">First dip → F0</text>
+  </g>
+  <!-- Panel 1: waveform and shifted copy -->
+  <g transform="translate(30 120)">
+    <use href="#wave" stroke="#5b6770"/>
+  </g>
+  <g transform="translate(80 195)">
+    <use href="#wave" stroke="#2f6b9a"/>
+  </g>
+  <path d="M30 150 V230" stroke="#9aa5b1" stroke-width="1" stroke-dasharray="3 3"/>
+  <path d="M80 150 V230" stroke="#9aa5b1" stroke-width="1" stroke-dasharray="3 3"/>
+  <path d="M32 238 H78" stroke="#183b56" stroke-width="2" marker-end="url(#arrow)"/>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#40566b">
+    <text x="30" y="258">x(t) and x(t + τ): at τ = T they match</text>
+    <text x="232" y="125">x(t)</text>
+    <text x="282" y="200" fill="#2f6b9a">x(t+τ)</text>
+    <text x="86" y="243" fill="#183b56">τ</text>
+  </g>
+  <path d="M300 150 h32" stroke="#607d8b" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Panel 2: d'(tau) -->
+  <g transform="translate(345 225)">
+    <path d="M0 0 h270" stroke="#607d8b" stroke-width="2"/>
+    <path d="M0 0 V-160" stroke="#607d8b" stroke-width="2"/>
+    <path d="M0 -15 h270" stroke="#b45050" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <path d="M0 -100 C10 -150 20 -150 30 -110 S45 -95 55 -105 S62 -10 70 -6 S78 -110 92 -120 S118 -95 128 -110 S135 -10 142 -5 S150 -120 165 -125 S190 -95 200 -110 S208 -8 214 -3 S222 -120 240 -125 L270 -110" fill="none" stroke="#3f8f5c" stroke-width="2.5"/>
+    <circle cx="70" cy="-6" r="6" fill="#2f6b9a"/>
+    <g font-family="Arial, sans-serif" font-size="13" fill="#40566b">
+      <text x="62" y="18">T</text><text x="134" y="18">2T</text><text x="206" y="18">3T</text>
+      <text x="200" y="-25" fill="#b45050">threshold</text>
+      <text x="-12" y="-100">1</text>
+    </g>
+  </g>
+  <text x="345" y="268" font-family="Arial, sans-serif" font-size="13" fill="#40566b">d′(τ): near 0 wherever the copies match</text>
+  <path d="M622 150 h32" stroke="#607d8b" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Panel 3: result -->
+  <g font-family="Arial, sans-serif" fill="#183b56">
+    <rect x="660" y="70" width="215" height="80" rx="8" fill="#e3edf5" stroke="#2f6b9a" stroke-width="1.5"/>
+    <text x="675" y="98" font-size="15" font-weight="bold">Voiced</text>
+    <text x="675" y="122" font-size="14">first dip below threshold at T</text>
+    <text x="675" y="142" font-size="14">F0 = sample rate ÷ T</text>
+    <rect x="660" y="165" width="215" height="70" rx="8" fill="#fbeee4" stroke="#b45050" stroke-width="1.5"/>
+    <text x="675" y="193" font-size="15" font-weight="bold">Unvoiced</text>
+    <text x="675" y="217" font-size="14">no dip below threshold</text>
+  </g>
+  <text x="660" y="268" font-family="Arial, sans-serif" font-size="13" fill="#40566b">first dip, not deepest: avoids 2T, 3T</text>
+</svg>

@@ -88,7 +88,7 @@ flowchart TD
 
 This topic has a build-it-yourself tutorial track. Each lesson introduces the mental model, implements it with NumPy, and then compares it with the practical library workflow.
 
-**Tutorial progress: 6 of 12 lessons**
+**Tutorial progress: 8 of 12 lessons**
 
 | Status | Lesson | Core outcome |
 | --- | --- | --- |
@@ -98,6 +98,8 @@ This topic has a build-it-yourself tutorial track. Each lesson introduces the me
 | ✅ | [04 · The Discrete Fourier Transform](curriculum/01-audio-signal-processing/04-discrete-fourier-transform/docs/en.md) | Build the DFT from its definition; read spectra and spectral leakage. |
 | ✅ | [05 · The Short-Time Fourier Transform](curriculum/01-audio-signal-processing/05-short-time-fourier-transform/docs/en.md) | Window frames, build the STFT and spectrograms, and invert them with overlap-add. |
 | ✅ | [06 · Mel Spectrograms and MFCCs](curriculum/01-audio-signal-processing/06-mel-spectrograms-and-mfccs/docs/en.md) | Build mel filterbanks, log-mel spectrograms, and MFCCs from scratch. |
+| ✅ | [07 · Frequency-Domain Features](curriculum/01-audio-signal-processing/07-frequency-domain-features/docs/en.md) | Compute spectral centroid, bandwidth, rolloff, flatness, and band energy ratio; separate vowels from fricatives. |
+| ✅ | [08 · Pitch Estimation](curriculum/01-audio-signal-processing/08-pitch-estimation/docs/en.md) | Estimate F0 with autocorrelation and YIN; make voicing decisions and avoid octave errors. |
 
 Run completed tutorials locally:
 
