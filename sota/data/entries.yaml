@@ -1,0 +1,366 @@
+# Single source of truth for the SOTA tracker.
+#
+# Edit this file, then run `make sota` to regenerate sota/topics/*.md and the
+# generated blocks in sota/README.md and README.md. CI fails if they drift.
+#
+# Fields
+#   name       short model or work name (required)
+#   title      full paper or report title (required)
+#   date       YYYY-MM of first public release, e.g. the arXiv v1 month; YYYY if unknown (required)
+#   topic      one of the keys in `topics` below (required)
+#   type       model | survey | benchmark | dataset | toolkit (required)
+#   paper      primary link: arXiv, tech report, or official page (required)
+#   code       official code or weights (optional)
+#   org        releasing organization, only when certain (optional)
+#   essential  true marks a must-read, shown as ⭐ (optional)
+#   tags       free-form, e.g. vi, streaming, open-weights (optional)
+#   note       one line on why it matters (required)
+
+topics:
+  surveys:
+    title: Surveys & Taxonomies
+    emoji: "🧭"
+    summary: Start here. Maps of the field that make individual papers easier to place.
+  tokenization:
+    title: Speech Tokenization & Neural Codecs
+    emoji: "🔤"
+    summary: >-
+      Discrete semantic and acoustic tokens are becoming the interface between waveforms and
+      language models. Key problems are bitrate, reconstruction quality, semantic content,
+      streaming, and generation efficiency.
+  asr:
+    title: Speech Recognition
+    emoji: "🎙️"
+    summary: >-
+      Encoders and decoding strategies for accurate, efficient, long-form, and low-resource
+      recognition, including LLM-based recognizers.
+  understanding:
+    title: Audio Understanding & Reasoning
+    emoji: "🎧"
+    summary: >-
+      Extends recognition into general audio understanding, long-context listening, instruction
+      following, and reasoning across speech, sound, and music.
+  dialogue:
+    title: Real-Time Spoken Dialogue & Omni Models
+    emoji: "🗣️"
+    summary: >-
+      Low-latency, end-to-end interaction that preserves paralinguistic information and handles
+      streaming input, interruptions, overlap, and natural turn-taking.
+  generation:
+    title: Speech Generation & Multilingual TTS
+    emoji: "🎨"
+    summary: >-
+      Zero-shot generation, multilingual coverage, controllability, streaming, diffusion and
+      flow-based generation, and robust synthesis in real-world conditions.
+  speaker:
+    title: Speaker & Diarization
+    emoji: "👥"
+    summary: Who spoke when, in streaming settings and jointly with recognition.
+  evaluation:
+    title: Evaluation, Benchmarks & Data
+    emoji: "📏"
+    summary: >-
+      Evaluation beyond accuracy and quality: audio reasoning, paralinguistics, latency,
+      interruption handling, backchanneling, and multi-speaker interaction.
+
+entries:
+  # --- Surveys -------------------------------------------------------------
+  - name: SpeechLM Survey
+    title: "Recent Advances in Speech Language Models: A Survey"
+    date: 2024-10
+    topic: surveys
+    type: survey
+    paper: https://arxiv.org/abs/2410.03751
+    essential: true
+    note: Clear taxonomy of speech LMs, from tokenizers to training recipes and evaluation.
+  - name: Audio-LM Survey
+    title: "Audio-Language Models for Audio-Centric Tasks: A Systematic Survey"
+    date: 2025-01
+    topic: surveys
+    type: survey
+    paper: https://arxiv.org/abs/2501.15177
+    note: Systematic review of audio-language models across understanding and generation tasks.
+  - name: Spoken LM Landscape
+    title: "On the Landscape of Spoken Language Models: A Comprehensive Survey"
+    date: 2025-04
+    topic: surveys
+    type: survey
+    paper: https://arxiv.org/abs/2504.08528
+    note: Organizes spoken language models by architecture, training, and evaluation.
+  - name: Discrete Speech Tokens Review
+    title: "Recent Advances in Discrete Speech Tokens: A Review"
+    date: 2025-02
+    topic: surveys
+    type: survey
+    paper: https://arxiv.org/abs/2502.06490
+    essential: true
+    note: The reference for semantic versus acoustic tokens and their trade-offs.
+
+  # --- Tokenization & codecs ----------------------------------------------
+  - name: WavTokenizer
+    title: "WavTokenizer: An Efficient Acoustic Discrete Codec Tokenizer for Audio Language Modeling"
+    date: 2024-08
+    topic: tokenization
+    type: model
+    paper: https://arxiv.org/abs/2408.16532
+    code: https://github.com/jishengpeng/WavTokenizer
+    essential: true
+    tags: [codec, low-bitrate]
+    note: Single-quantizer codec with very few tokens per second, built for audio LMs.
+  - name: BigCodec
+    title: "BigCodec: Pushing the Limits of Low-Bitrate Neural Speech Codec"
+    date: 2024-09
+    topic: tokenization
+    type: model
+    paper: https://arxiv.org/abs/2409.05377
+    tags: [codec, low-bitrate]
+    note: Shows how far a single-codebook speech codec can go at around 1 kbps.
+
+  # --- ASR ------------------------------------------------------------------
+  - name: ChunkFormer
+    title: "ChunkFormer: Masked Chunking Conformer for Long-Form Speech Transcription"
+    date: 2025-02
+    topic: asr
+    type: model
+    paper: https://arxiv.org/abs/2502.14673
+    essential: true
+    tags: [long-form]
+    note: Chunk-wise processing handles up to 16 h of audio on one 80 GB GPU, with 3x faster batching than Conformer (ICASSP 2025).
+  - name: Qwen3-ASR
+    title: Qwen3-ASR Technical Report
+    date: 2026-01
+    topic: asr
+    type: model
+    paper: https://arxiv.org/abs/2601.21337
+    org: Alibaba Qwen
+    tags: [llm-based, multilingual]
+    note: LLM-based multilingual recognizer from the Qwen3 family.
+  - name: Gipformer
+    title: "Gipformer: Efficient Vietnamese Speech Recognition"
+    date: 2026
+    topic: asr
+    type: model
+    paper: https://github.com/ggroup-ai-lab/gipformer
+    code: https://github.com/ggroup-ai-lab/gipformer
+    essential: true
+    tags: [vi, edge, onnx]
+    note: 65M-parameter Zipformer transducer, SOTA on 9 of 12 Vietnamese ASR benchmarks, deployable at the edge with ONNX and INT8.
+
+  # --- Understanding -------------------------------------------------------
+  - name: Qwen-Audio
+    title: "Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models"
+    date: 2023-11
+    topic: understanding
+    type: model
+    paper: https://arxiv.org/abs/2311.07919
+    code: https://github.com/QwenLM/Qwen-Audio
+    org: Alibaba Qwen
+    essential: true
+    tags: [open-weights]
+    note: Early unified audio-language model trained across 30+ tasks with hierarchical task tags.
+  - name: Kimi-Audio
+    title: "Kimi-Audio: An Open-Source Audio Foundation Model for Understanding, Generation, and Conversation"
+    date: 2025-04
+    topic: understanding
+    type: model
+    paper: https://arxiv.org/abs/2504.18425
+    code: https://github.com/MoonshotAI/Kimi-Audio
+    org: Moonshot AI
+    essential: true
+    tags: [open-weights]
+    note: One open foundation model covering understanding, generation, and conversation.
+  - name: Audio Flamingo 3
+    title: "Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio Language Models"
+    date: 2025-07
+    topic: understanding
+    type: model
+    paper: https://arxiv.org/abs/2507.08128
+    code: https://github.com/NVIDIA/audio-flamingo
+    org: NVIDIA
+    essential: true
+    tags: [open-weights, reasoning]
+    note: Fully open audio LM with reasoning and long-audio understanding across speech, sound, and music.
+
+  # --- Dialogue & omni -----------------------------------------------------
+  - name: FunAudioLLM
+    title: "FunAudioLLM: Voice Understanding and Generation Foundation Models"
+    date: 2024-07
+    topic: dialogue
+    type: model
+    paper: https://arxiv.org/abs/2407.04051
+    org: Alibaba Tongyi
+    note: Pairs SenseVoice (understanding) with CosyVoice (generation) for natural voice interaction.
+  - name: Mini-Omni
+    title: "Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming"
+    date: 2024-08
+    topic: dialogue
+    type: model
+    paper: https://arxiv.org/abs/2408.16725
+    code: https://github.com/gpt-omni/mini-omni
+    essential: true
+    tags: [streaming, open-weights]
+    note: Early open model that generates text and speech in parallel for real-time replies.
+  - name: EMOVA
+    title: "EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions"
+    date: 2024-09
+    topic: dialogue
+    type: model
+    paper: https://arxiv.org/abs/2409.18042
+    tags: [emotion, multimodal]
+    note: Omni model with emotional, controllable spoken output alongside vision.
+  - name: Moshi
+    title: "Moshi: A Speech-Text Foundation Model for Real-Time Dialogue"
+    date: 2024-10
+    topic: dialogue
+    type: model
+    paper: https://arxiv.org/abs/2410.00037
+    code: https://github.com/kyutai-labs/moshi
+    org: Kyutai
+    essential: true
+    tags: [full-duplex, streaming, open-weights]
+    note: Full-duplex dialogue that models user and system audio streams at the same time.
+  - name: Qwen2.5-Omni
+    title: Qwen2.5-Omni Technical Report
+    date: 2025-03
+    topic: dialogue
+    type: model
+    paper: https://arxiv.org/abs/2503.20215
+    code: https://github.com/QwenLM/Qwen2.5-Omni
+    org: Alibaba Qwen
+    essential: true
+    tags: [streaming, multimodal, open-weights]
+    note: Thinker-Talker design that perceives text, image, audio, and video and replies in streaming speech.
+  - name: LLaMA-Omni 2
+    title: "LLaMA-Omni 2: LLM-Based Real-Time Spoken Chatbot with Streaming Speech Synthesis"
+    date: 2025-05
+    topic: dialogue
+    type: model
+    paper: https://arxiv.org/abs/2505.02625
+    code: https://github.com/ictnlp/LLaMA-Omni2
+    tags: [streaming, open-weights]
+    note: Adds a streaming speech decoder to an LLM for low-latency spoken chat.
+  - name: Step-Audio 2
+    title: Step-Audio 2 Technical Report
+    date: 2025-07
+    topic: dialogue
+    type: model
+    paper: https://arxiv.org/abs/2507.16632
+    code: https://github.com/stepfun-ai/Step-Audio2
+    org: StepFun
+    essential: true
+    tags: [paralinguistics]
+    note: End-to-end audio LM for industrial-grade understanding and conversation, aware of paralinguistic cues.
+
+  # --- Generation ----------------------------------------------------------
+  - name: CosyVoice
+    title: "CosyVoice: A Scalable Multilingual Zero-Shot Text-to-Speech Synthesizer"
+    date: 2024-07
+    topic: generation
+    type: model
+    paper: https://arxiv.org/abs/2407.05407
+    code: https://github.com/FunAudioLLM/CosyVoice
+    org: Alibaba Tongyi
+    essential: true
+    tags: [zero-shot, multilingual, open-weights]
+    note: Supervised semantic tokens plus flow matching for zero-shot multilingual TTS.
+  - name: F5-TTS
+    title: "F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching"
+    date: 2024-10
+    topic: generation
+    type: model
+    paper: https://arxiv.org/abs/2410.06885
+    code: https://github.com/SWivid/F5-TTS
+    essential: true
+    tags: [zero-shot, flow-matching, open-weights]
+    note: Non-autoregressive flow-matching TTS without duration models or phoneme alignment.
+  - name: CosyVoice 3
+    title: "CosyVoice 3: Towards In-the-Wild Speech Generation via Scaling-Up and Post-Training"
+    date: 2025-05
+    topic: generation
+    type: model
+    paper: https://arxiv.org/abs/2505.17589
+    org: Alibaba Tongyi
+    tags: [zero-shot, multilingual]
+    note: Scales data and model size and adds post-training for robust in-the-wild synthesis.
+  - name: Qwen3-TTS
+    title: Qwen3-TTS Technical Report
+    date: 2026-01
+    topic: generation
+    type: model
+    paper: https://arxiv.org/abs/2601.15621
+    org: Alibaba Qwen
+    tags: [multilingual]
+    note: Multilingual TTS from the Qwen3 family.
+  - name: OmniVoice
+    title: "OmniVoice: Towards Omnilingual Zero-Shot TTS with Diffusion Language Models"
+    date: 2026-04
+    topic: generation
+    type: model
+    paper: https://arxiv.org/abs/2604.00688
+    essential: true
+    tags: [zero-shot, multilingual, diffusion]
+    note: Pushes zero-shot TTS toward omnilingual coverage with a diffusion language model.
+
+  # --- Speaker -------------------------------------------------------------
+  - name: Streaming Sortformer
+    title: "Streaming Sortformer: Speaker Cache-Based Online Speaker Diarization with Arrival-Time Ordering"
+    date: 2025-07
+    topic: speaker
+    type: model
+    paper: https://arxiv.org/abs/2507.18446
+    org: NVIDIA
+    essential: true
+    tags: [streaming, diarization]
+    note: Online diarization with a speaker cache that keeps speakers in arrival-time order.
+
+  # --- Evaluation ----------------------------------------------------------
+  - name: VoiceBench
+    title: "VoiceBench: Benchmarking LLM-Based Voice Assistants"
+    date: 2024-10
+    topic: evaluation
+    type: benchmark
+    paper: https://arxiv.org/abs/2410.17196
+    code: https://github.com/MatthewCYM/VoiceBench
+    essential: true
+    note: Tests voice assistants on spoken instructions with real speaker, environment, and content variation.
+  - name: Full-Duplex-Bench v1.5
+    title: "Full-Duplex-Bench v1.5: Evaluating Overlap Handling for Full-Duplex Speech Models"
+    date: 2025-07
+    topic: evaluation
+    type: benchmark
+    paper: https://arxiv.org/abs/2507.23159
+    tags: [full-duplex]
+    note: Measures how full-duplex models behave when user and system speech overlap.
+  - name: ART
+    title: A Benchmark for Audio Reasoning Capabilities of Multimodal LLMs
+    date: 2026-01
+    topic: evaluation
+    type: benchmark
+    paper: https://arxiv.org/abs/2601.19673
+    tags: [reasoning]
+    note: Audio reasoning benchmark for multimodal LLMs.
+  - name: WavBench
+    title: "WavBench: Benchmarking Reasoning, Colloquialism, and Paralinguistics"
+    date: 2026-02
+    topic: evaluation
+    type: benchmark
+    paper: https://arxiv.org/abs/2602.12135
+    tags: [reasoning, paralinguistics]
+    note: Evaluates spoken models on reasoning, colloquial speech, and paralinguistic cues.
+  - name: HumDial-FDBench
+    title: "HumDial-FDBench: Full-Duplex Interaction in Spoken Dialogue Systems"
+    date: 2026-04
+    topic: evaluation
+    type: benchmark
+    paper: https://arxiv.org/abs/2604.21406
+    essential: true
+    tags: [full-duplex]
+    note: Benchmark for full-duplex interaction quality in spoken dialogue systems.
+  - name: DuplexChat
+    title: "DuplexChat: Speaker-Separated Full-Duplex Dialogue Speech at Scale"
+    date: 2026-07
+    topic: evaluation
+    type: dataset
+    paper: https://arxiv.org/abs/2607.04941
+    tags: [full-duplex]
+    note: Large-scale, speaker-separated dialogue speech for training full-duplex models.

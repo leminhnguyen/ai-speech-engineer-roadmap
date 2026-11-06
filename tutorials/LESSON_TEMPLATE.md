@@ -1,6 +1,6 @@
 # Lesson Template
 
-Each lesson lives in `curriculum/NN-phase/NN-lesson-slug/` and contains:
+Each lesson lives in `tutorials/NN-module/NN-lesson-slug/` and contains:
 
 ```text
 docs/en.md                 # learner-facing explanation
