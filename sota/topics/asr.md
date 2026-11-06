@@ -8,6 +8,6 @@
 
 | Date | Work | Org | Type | Why it matters | Links |
 | :---: | --- | --- | :---: | --- | --- |
+| 2026-03 | ⭐ **Gipformer** 🇻🇳 | G-Group AI Lab | model | 68M Zipformer RNN-T for Vietnamese call-center speech, MIT-licensed; v1.5 beats PhoWhisper-large on hard call-center test sets. | [paper](https://github.com/ggroup-ai-lab/gipformer) · [code](https://huggingface.co/g-group-ai-lab/gipformer1.5-68M-rnnt) |
 | 2026-01 | **Qwen3-ASR** | Alibaba Qwen | model | LLM-based multilingual recognizer from the Qwen3 family. | [paper](https://arxiv.org/abs/2601.21337) |
-| 2026 | ⭐ **Gipformer** 🇻🇳 | — | model | 65M-parameter Zipformer transducer, SOTA on 9 of 12 Vietnamese ASR benchmarks, deployable at the edge with ONNX and INT8. | [paper](https://github.com/ggroup-ai-lab/gipformer) |
 | 2025-02 | ⭐ **ChunkFormer** | — | model | Chunk-wise processing handles up to 16 h of audio on one 80 GB GPU, with 3x faster batching than Conformer (ICASSP 2025). | [paper](https://arxiv.org/abs/2502.14673) |

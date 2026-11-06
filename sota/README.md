@@ -28,7 +28,7 @@ Start with the [surveys](topics/surveys.md), then follow the track closest to yo
 | :---: | --- | :---: | :---: |
 | 🧭 | [Surveys & Taxonomies](topics/surveys.md) | 4 | 2025-04 |
 | 🔤 | [Speech Tokenization & Neural Codecs](topics/tokenization.md) | 2 | 2024-09 |
-| 🎙️ | [Speech Recognition](topics/asr.md) | 3 | 2026-01 |
+| 🎙️ | [Speech Recognition](topics/asr.md) | 3 | 2026-03 |
 | 🎧 | [Audio Understanding & Reasoning](topics/understanding.md) | 3 | 2025-07 |
 | 🗣️ | [Real-Time Spoken Dialogue & Omni Models](topics/dialogue.md) | 7 | 2025-07 |
 | 🎨 | [Speech Generation & Multilingual TTS](topics/generation.md) | 5 | 2026-04 |
@@ -46,11 +46,11 @@ The ten newest entries by release date.
 | 2026-07 | **DuplexChat** | [Evaluation, Benchmarks & Data](topics/evaluation.md) | Large-scale, speaker-separated dialogue speech for training full-duplex models. |
 | 2026-04 | ⭐ **OmniVoice** | [Speech Generation & Multilingual TTS](topics/generation.md) | Pushes zero-shot TTS toward omnilingual coverage with a diffusion language model. |
 | 2026-04 | ⭐ **HumDial-FDBench** | [Evaluation, Benchmarks & Data](topics/evaluation.md) | Benchmark for full-duplex interaction quality in spoken dialogue systems. |
+| 2026-03 | ⭐ **Gipformer** 🇻🇳 | [Speech Recognition](topics/asr.md) | 68M Zipformer RNN-T for Vietnamese call-center speech, MIT-licensed; v1.5 beats PhoWhisper-large on hard call-center test sets. |
 | 2026-02 | **WavBench** | [Evaluation, Benchmarks & Data](topics/evaluation.md) | Evaluates spoken models on reasoning, colloquial speech, and paralinguistic cues. |
 | 2026-01 | **Qwen3-TTS** | [Speech Generation & Multilingual TTS](topics/generation.md) | Multilingual TTS from the Qwen3 family. |
 | 2026-01 | **Qwen3-ASR** | [Speech Recognition](topics/asr.md) | LLM-based multilingual recognizer from the Qwen3 family. |
 | 2026-01 | **ART** | [Evaluation, Benchmarks & Data](topics/evaluation.md) | Audio reasoning benchmark for multimodal LLMs. |
-| 2026 | ⭐ **Gipformer** 🇻🇳 | [Speech Recognition](topics/asr.md) | 65M-parameter Zipformer transducer, SOTA on 9 of 12 Vietnamese ASR benchmarks, deployable at the edge with ONNX and INT8. |
 | 2025-07 | ⭐ **Streaming Sortformer** | [Speaker & Diarization](topics/speaker.md) | Online diarization with a speaker cache that keeps speakers in arrival-time order. |
 | 2025-07 | ⭐ **Step-Audio 2** | [Real-Time Spoken Dialogue & Omni Models](topics/dialogue.md) | End-to-end audio LM for industrial-grade understanding and conversation, aware of paralinguistic cues. |
 <!-- END LATEST -->

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220" role="img" aria-labelledby="title desc">
+  <title id="title">Roadmap</title>
+  <desc id="desc">A glowing dot travels along a winding path through four stages: Foundations, Tools, Core Speech, and SOTA.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b2240"/>
+      <stop offset="1" stop-color="#1a5276"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .font { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; fill: #7fd3ff; }
+    .title { font-size: 24px; font-weight: 800; fill: #ffffff; }
+    .tagline { font-size: 12.5px; fill: #b9d3ee; }
+    .label { font-size: 10px; font-weight: 600; fill: #dbe9f7; text-anchor: middle; }
+    .track { fill: none; stroke: #ffffff2e; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 6; }
+    .comet { fill: none; stroke: #7fd3ff; stroke-width: 4; stroke-linecap: round;
+             stroke-dasharray: 12 100; animation: run 4s linear infinite; }
+    @keyframes run { from { stroke-dashoffset: 12; } to { stroke-dashoffset: -100; } }
+    .node { fill: #0b2240; stroke: #7fd3ff; stroke-width: 2.5; animation: lit 4s ease-out infinite; }
+    .n2 { animation-delay: 1.3s; } .n3 { animation-delay: 2.6s; } .n4 { animation-delay: 3.9s; }
+    @keyframes lit { 0% { fill: #7fd3ff; } 30%, 100% { fill: #0b2240; } }
+    @media (prefers-reduced-motion: reduce) { .comet, .node { animation: none; } }
+  </style>
+
+  <rect width="320" height="220" rx="16" fill="url(#bg)"/>
+  <text x="24" y="34" class="font eyebrow">PILLAR 01</text>
+  <text x="24" y="62" class="font title">Roadmap</text>
+  <text x="24" y="82" class="font tagline">What to learn, and in what order</text>
+
+  <path class="track" d="M40 172 C 80 172, 80 128, 120 128 S 160 168, 200 168 S 240 122, 280 122"/>
+  <path class="comet" filter="url(#glow)" pathLength="100"
+        d="M40 172 C 80 172, 80 128, 120 128 S 160 168, 200 168 S 240 122, 280 122"/>
+
+  <circle class="node n1" cx="40" cy="172" r="7"/>
+  <circle class="node n2" cx="120" cy="128" r="7"/>
+  <circle class="node n3" cx="200" cy="168" r="7"/>
+  <circle class="node n4" cx="280" cy="122" r="7"/>
+
+  <text x="44" y="198" class="font label">Foundations</text>
+  <text x="120" y="154" class="font label">Tools</text>
+  <text x="200" y="194" class="font label">Core Speech</text>
+  <text x="280" y="148" class="font label">SOTA</text>
+</svg>

@@ -30,41 +30,25 @@ Speech AI sits at the intersection of signal processing, deep learning, and ling
 <table>
 <tr>
 <td width="33%" valign="top">
+<a href="roadmap/README.md"><img src="assets/cards/roadmap.svg" width="100%" alt="Roadmap: what to learn, and in what order"/></a>
 
-### 🗺️ [Roadmap](roadmap/README.md)
+A curated path through knowledge that stays useful for years: math and ML, audio signal processing, the standard toolkit, and the core speech technologies. ⭐ marks the essentials.
 
-**What to learn, and in what order.**
-
-A curated path through the knowledge that stays useful for years: math and ML, audio signal processing, the standard toolkit, and the core speech technologies.
-
-⭐ marks the essentials.
-
-*Changes: rarely*
-
+<sub>🕰️ Changes rarely</sub>
 </td>
 <td width="33%" valign="top">
+<a href="tutorials/README.md"><img src="assets/cards/tutorials.svg" width="100%" alt="Tutorials: build it from scratch to understand it"/></a>
 
-### 🛠️ [Tutorials](tutorials/README.md)
+Hands-on lessons that implement each concept with NumPy, prove it with tests, then compare it with production libraries. Every lesson runs in CI.
 
-**Build it to understand it.**
-
-Hands-on lessons that implement each concept with NumPy, prove it with tests, then compare it with production libraries.
-
-Every lesson runs in CI.
-
-*Changes: as lessons are added*
-
+<sub>🧱 Grows as lessons are added</sub>
 </td>
 <td width="33%" valign="top">
-
-### 📡 [SOTA Tracker](sota/README.md)
-
-**What is new, and why it matters.**
+<a href="sota/README.md"><img src="assets/cards/sota.svg" width="100%" alt="SOTA Tracker: what's new, and why it matters"/></a>
 
 A dated, curated timeline of new models, codecs, benchmarks, and surveys, grouped by track: speech LMs, full-duplex dialogue, TTS, ASR, and more.
 
-*Changes: continuously*
-
+<sub>📡 Updated continuously</sub>
 </td>
 </tr>
 </table>
@@ -111,8 +95,8 @@ The five most recent entries in the [SOTA tracker](sota/README.md). ⭐ = must-r
 | 2026-07 | **DuplexChat** | [Evaluation, Benchmarks & Data](sota/topics/evaluation.md) | Large-scale, speaker-separated dialogue speech for training full-duplex models. |
 | 2026-04 | ⭐ **OmniVoice** | [Speech Generation & Multilingual TTS](sota/topics/generation.md) | Pushes zero-shot TTS toward omnilingual coverage with a diffusion language model. |
 | 2026-04 | ⭐ **HumDial-FDBench** | [Evaluation, Benchmarks & Data](sota/topics/evaluation.md) | Benchmark for full-duplex interaction quality in spoken dialogue systems. |
+| 2026-03 | ⭐ **Gipformer** 🇻🇳 | [Speech Recognition](sota/topics/asr.md) | 68M Zipformer RNN-T for Vietnamese call-center speech, MIT-licensed; v1.5 beats PhoWhisper-large on hard call-center test sets. |
 | 2026-02 | **WavBench** | [Evaluation, Benchmarks & Data](sota/topics/evaluation.md) | Evaluates spoken models on reasoning, colloquial speech, and paralinguistic cues. |
-| 2026-01 | **Qwen3-TTS** | [Speech Generation & Multilingual TTS](sota/topics/generation.md) | Multilingual TTS from the Qwen3 family. |
 <!-- END LATEST -->
 
 ## 🚀 Getting Started
