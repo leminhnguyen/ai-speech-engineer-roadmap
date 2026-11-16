@@ -60,6 +60,7 @@ A dated, curated timeline of new models, codecs, benchmarks, and surveys, groupe
 | 🌱 **New to speech** | [Roadmap · 01 Foundations](roadmap/01-foundations.md) | Work through the [tutorials](tutorials/README.md) alongside it |
 | 🔬 **Want to understand deeply** | [Lesson 01 · Sound and Waveforms](tutorials/01-audio-signal-processing/01-sound-and-waveforms/docs/en.md) | Continue to [Core Speech Technologies](roadmap/03-core-speech-technologies.md) |
 | 🚀 **Already working in speech** | [SOTA Tracker](sota/README.md) | Start with the [surveys](sota/topics/surveys.md), then your track |
+| ☎️ **Building a phone voice agent** | [04 · AI Contact Center](tutorials/04-ai-contact-center/README.md) | Start at [Telephony and SIP](tutorials/04-ai-contact-center/01-telephony-and-sip/docs/en.md), then the [LiveKit docs](https://docs.livekit.io/telephony) |
 | 🇻🇳 **Building for Vietnamese** | [Vietnamese Speech](roadmap/vietnamese-speech.md) | VLSP reports, phonemizers, theses, and Vietnamese models |
 
 ## 🗺️ The Roadmap at a Glance
@@ -82,6 +83,7 @@ Durations are guidelines, not deadlines. Move on when you can explain the core i
 | 🔊 **01 · Audio Signal Processing** | ![8/12](https://img.shields.io/badge/8%20%2F%2012%20lessons-orange) | Waveforms → sampling → DFT/STFT → mel & MFCC → spectral features → pitch |
 | 🎙️ **02 · Speech Recognition** | ![planned](https://img.shields.io/badge/planned-lightgrey) | |
 | 🗣️ **03 · Speech Synthesis** | ![planned](https://img.shields.io/badge/planned-lightgrey) | |
+| ☎️ **04 · AI Contact Center with LiveKit** | ![10/10](https://img.shields.io/badge/10%20%2F%2010%20lessons-brightgreen) | SIP & G.711 → jitter, noise, echo → VAD, turn detection, barge-in → latency & hand-offs |
 
 **[→ See all lessons](tutorials/README.md)**
 
@@ -144,7 +146,8 @@ make check                         # audit lessons, run tests, verify the SOTA t
 ├── tutorials/                  # 🛠️ Pillar 2: build it from scratch
 │   ├── README.md               #    Module and lesson index
 │   ├── LESSON_TEMPLATE.md
-│   └── 01-audio-signal-processing/
+│   ├── 01-audio-signal-processing/
+│   └── 04-ai-contact-center/   #    Phone voice agents with LiveKit
 ├── sota/                       # 📡 Pillar 3: what is new
 │   ├── README.md               #    Big picture, tracks, latest additions
 │   ├── data/entries.yaml       #    Single source of truth

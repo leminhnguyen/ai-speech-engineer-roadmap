@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" role="img" aria-labelledby="warm-title warm-desc">
+  <title id="warm-title">A warm transfer from the AI agent to a human</title>
+  <desc id="warm-desc">Swimlane of a warm transfer across caller, AI agent, LiveKit and human agent: the caller asks for a person, the AI puts them on hold, LiveKit dials the human into a consultation room, the AI briefs the human with a call summary, the human accepts, LiveKit moves the human into the caller's room and the AI leaves, so the caller talks to a person who already knows the context.</desc>
+  <defs>
+    <marker id="warm-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+    <marker id="warm-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+    <symbol id="warm-ico-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14"/><path d="M11 4h2"/><path d="M12 17v.01"/></symbol>
+    <symbol id="warm-ico-robot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4"/><path d="M12 2v2"/><path d="M9 12v9"/><path d="M15 12v9"/><path d="M5 16l4 -2"/><path d="M15 14l4 2"/><path d="M9 18h6"/><path d="M10 8v.01"/><path d="M14 8v.01"/></symbol>
+    <symbol id="warm-ico-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3"/><path d="M3 15a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -2"/><path d="M7 8l0 .01"/><path d="M7 16l0 .01"/></symbol>
+    <symbol id="warm-ico-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-3a8 8 0 1 1 16 0v3"/><path d="M18 19c0 1.657 -2.686 3 -6 3"/><path d="M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3"/><path d="M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3"/></symbol>
+  </defs>
+  <rect width="1000" height="600" fill="#f5f5f5"/>
+
+  <text x="40" y="36" fill="#bf4520" font-size="9" font-weight="500" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" letter-spacing="0.16em">MODULE 04 · LESSON 10</text>
+  <text x="40" y="66" fill="#2d3142" font-size="24" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">A warm transfer: the human hears the story before the caller does.</text>
+  <g stroke="rgba(45,49,66,0.12)" stroke-width="0.8">
+    <line x1="40" y1="96" x2="960" y2="96"/>
+    <line x1="40" y1="192" x2="960" y2="192"/>
+    <line x1="40" y1="288" x2="960" y2="288"/>
+    <line x1="40" y1="384" x2="960" y2="384"/>
+    <line x1="40" y1="480" x2="960" y2="480"/>
+  </g>
+  <use href="#warm-ico-mobile" x="40" y="116" width="16" height="16" color="#5a6580"/>
+  <text x="40" y="152" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif">Caller</text>
+  <text x="40" y="166" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace">phone line</text>
+  <use href="#warm-ico-robot" x="40" y="212" width="16" height="16" color="#5a6580"/>
+  <text x="40" y="248" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif">AI agent</text>
+  <text x="40" y="262" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace">AgentSession</text>
+  <use href="#warm-ico-server" x="40" y="308" width="16" height="16" color="#5a6580"/>
+  <text x="40" y="344" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif">LiveKit</text>
+  <text x="40" y="358" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace">SIP + rooms</text>
+  <use href="#warm-ico-headset" x="40" y="404" width="16" height="16" color="#5a6580"/>
+  <text x="40" y="440" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif">Human agent</text>
+  <text x="40" y="454" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace">tier-2 softphone</text>
+  <path d="M 264,144 H 320 Q 328,144 328,152 V 214" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#warm-arrow)"/>
+  <path d="M 380,240 H 436 Q 444,240 444,248 V 310" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#warm-arrow)"/>
+  <path d="M 496,336 H 552 Q 560,336 560,344 V 406" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#warm-arrow)"/>
+  <path d="M 612,432 H 668 Q 676,432 676,424 V 266" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#warm-arrow)"/>
+  <path d="M 728,240 H 784 Q 792,240 792,248 V 406" fill="none" stroke="#bf4520" stroke-width="1.4" marker-end="url(#warm-arrow-accent)"/>
+  <path d="M 844,432 H 900 Q 908,432 908,424 V 362" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#warm-arrow)"/>
+  <path d="M 908,312 V 170" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#warm-arrow)"/>
+  <rect x="744" y="220" width="40" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="764" y="229" fill="#bf4520" font-size="8" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">BRIEF</text>
+  <rect x="916" y="234" width="40" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="920" y="243" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" letter-spacing="0.06em">MOVE</text>
+  <rect x="160" y="120" width="104" height="48" rx="6" fill="#f5f5f5"/>
+  <rect x="160" y="120" width="104" height="48" rx="6" fill="rgba(79,93,117,0.10)" stroke="#5a6580" stroke-width="1"/>
+  <rect x="166" y="125" width="20" height="12" rx="2" fill="none" stroke="#5a6580" stroke-opacity="0.45" stroke-width="0.8"/>
+  <text x="176" y="134" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">01</text>
+  <text x="212" y="151" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Asks for human</text>
+  <text x="212" y="163" fill="#4f5d75" font-size="8.5" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">“gặp nhân viên”</text>
+  <rect x="276" y="216" width="104" height="48" rx="6" fill="#f5f5f5"/>
+  <rect x="276" y="216" width="104" height="48" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <rect x="282" y="221" width="20" height="12" rx="2" fill="none" stroke="#5a6580" stroke-opacity="0.45" stroke-width="0.8"/>
+  <text x="292" y="230" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">02</text>
+  <text x="328" y="247" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Holds caller</text>
+  <text x="328" y="259" fill="#4f5d75" font-size="8.5" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">hold music</text>
+  <rect x="392" y="312" width="104" height="48" rx="6" fill="#f5f5f5"/>
+  <rect x="392" y="312" width="104" height="48" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <rect x="398" y="317" width="20" height="12" rx="2" fill="none" stroke="#5a6580" stroke-opacity="0.45" stroke-width="0.8"/>
+  <text x="408" y="326" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">03</text>
+  <text x="444" y="343" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Dials human</text>
+  <text x="444" y="355" fill="#4f5d75" font-size="8.5" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">outbound SIP</text>
+  <rect x="508" y="408" width="104" height="48" rx="6" fill="#f5f5f5"/>
+  <rect x="508" y="408" width="104" height="48" rx="6" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.30)" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="514" y="413" width="20" height="12" rx="2" fill="none" stroke="#5a6580" stroke-opacity="0.45" stroke-width="0.8"/>
+  <text x="524" y="422" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">04</text>
+  <text x="560" y="439" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Answers</text>
+  <text x="560" y="451" fill="#4f5d75" font-size="8.5" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">consult room</text>
+  <rect x="624" y="216" width="104" height="48" rx="6" fill="#f5f5f5"/>
+  <rect x="624" y="216" width="104" height="48" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+  <rect x="630" y="221" width="20" height="12" rx="2" fill="none" stroke="#bf4520" stroke-opacity="0.45" stroke-width="0.8"/>
+  <text x="640" y="230" fill="#bf4520" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">05</text>
+  <text x="676" y="247" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Briefs human</text>
+  <text x="676" y="259" fill="#4f5d75" font-size="8.5" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">call summary</text>
+  <rect x="740" y="408" width="104" height="48" rx="6" fill="#f5f5f5"/>
+  <rect x="740" y="408" width="104" height="48" rx="6" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.30)" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="746" y="413" width="20" height="12" rx="2" fill="none" stroke="#5a6580" stroke-opacity="0.45" stroke-width="0.8"/>
+  <text x="756" y="422" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">06</text>
+  <text x="792" y="439" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Accepts</text>
+  <text x="792" y="451" fill="#4f5d75" font-size="8.5" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">connect_to_caller</text>
+  <rect x="856" y="312" width="104" height="48" rx="6" fill="#f5f5f5"/>
+  <rect x="856" y="312" width="104" height="48" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+  <rect x="862" y="317" width="20" height="12" rx="2" fill="none" stroke="#5a6580" stroke-opacity="0.45" stroke-width="0.8"/>
+  <text x="872" y="326" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">07</text>
+  <text x="908" y="343" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Merges call</text>
+  <text x="908" y="355" fill="#4f5d75" font-size="8.5" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">AI leaves room</text>
+  <rect x="856" y="120" width="104" height="48" rx="6" fill="#f5f5f5"/>
+  <rect x="856" y="120" width="104" height="48" rx="6" fill="rgba(79,93,117,0.10)" stroke="#5a6580" stroke-width="1"/>
+  <rect x="862" y="125" width="20" height="12" rx="2" fill="none" stroke="#5a6580" stroke-opacity="0.45" stroke-width="0.8"/>
+  <text x="872" y="134" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">08</text>
+  <text x="908" y="151" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Talks to human</text>
+  <text x="908" y="163" fill="#4f5d75" font-size="8.5" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">no repeat asks</text>
+  <text x="160" y="512" fill="#4f5d75" font-size="14" font-style="italic" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">Declined → the AI resumes the call. No answer within the ringing timeout → the AI offers a callback.</text>
+  <line x1="40" y1="532" x2="960" y2="532" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+  <g font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#4f5d75">
+    <text x="40" y="564" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" letter-spacing="0.18em">LEGEND</text>
+    <rect x="112" y="556" width="16" height="10" rx="2" fill="#ffffff" stroke="#2d3142"/>
+    <text x="136" y="564">Platform or AI step</text>
+    <rect x="248" y="556" width="16" height="10" rx="2" fill="rgba(79,93,117,0.10)" stroke="#5a6580"/>
+    <text x="272" y="564">Caller</text>
+    <rect x="324" y="556" width="16" height="10" rx="2" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.30)" stroke-dasharray="3,2"/>
+    <text x="348" y="564">Human agent</text>
+    <rect x="428" y="556" width="16" height="10" rx="2" fill="rgba(191,69,32,0.08)" stroke="#bf4520"/>
+    <text x="452" y="564">What makes it warm</text>
+    <line x1="564" y1="561" x2="588" y2="561" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#warm-arrow)"/>
+    <text x="596" y="564">Hand-off between lanes</text>
+  </g>
+</svg>

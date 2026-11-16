@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 528" width="1000" height="528" role="img" aria-labelledby="barge-title barge-desc">
+  <title id="barge-title">What a voice agent does when the caller talks over it</title>
+  <desc id="barge-desc">State machine of agent speech: while speaking, backchannels and noise are ignored; enough caller speech pauses the agent; a transcript during the pause stops it and truncates its history; silence for the false-interruption timeout resumes it; a final transcript can also stop it directly.</desc>
+  <defs>
+    <marker id="barge-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+    <marker id="barge-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+    <symbol id="barge-ico-volume" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8a5 5 0 0 1 0 8"/><path d="M17.7 5a9 9 0 0 1 0 14"/><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"/></symbol>
+    <symbol id="barge-ico-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"/><path d="M14 6a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"/></symbol>
+    <symbol id="barge-ico-stop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"/></symbol>
+    <symbol id="barge-ico-replay" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.95 11a8 8 0 1 0 -.5 4m.5 5v-5h-5"/></symbol>
+  </defs>
+  <rect width="1000" height="528" fill="#f5f5f5"/>
+
+  <text x="40" y="36" fill="#bf4520" font-size="9" font-weight="500" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" letter-spacing="0.16em">MODULE 04 · LESSON 08</text>
+  <text x="40" y="66" fill="#2d3142" font-size="24" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">Pause first, decide second.</text>
+
+  <!-- transitions (drawn before states) -->
+  <line x1="70" y1="220" x2="104" y2="220" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#barge-arrow)"/>
+  <!-- self-loop: ignored overlaps -->
+  <path d="M 136,192 V 172 Q 136,164 144,164 H 168 Q 176,164 176,172 V 190" fill="none" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#barge-arrow)"/>
+  <!-- speaking -> paused -->
+  <line x1="264" y1="220" x2="398" y2="220" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#barge-arrow)"/>
+  <!-- paused -> stopped (headline) -->
+  <line x1="560" y1="220" x2="678" y2="220" stroke="#bf4520" stroke-width="1.4" marker-end="url(#barge-arrow-accent)"/>
+  <!-- speaking -> stopped via final transcript, routed above -->
+  <path d="M 232,192 V 140 Q 232,132 240,132 H 752 Q 760,132 760,140 V 190" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#barge-arrow)"/>
+  <!-- paused -> resumed -->
+  <line x1="480" y1="248" x2="480" y2="342" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#barge-arrow)"/>
+  <!-- resumed -> speaking -->
+  <path d="M 400,372 H 192 Q 184,372 184,364 V 250" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#barge-arrow)"/>
+  <!-- stopped -> user turn -->
+  <line x1="840" y1="220" x2="894" y2="220" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#barge-arrow)"/>
+
+  <!-- transition labels -->
+  <g font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" text-anchor="middle" letter-spacing="0.06em">
+    <rect x="112" y="144" width="88" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="156" y="153" fill="#4f5d75">BACKCHANNEL</text>
+    <rect x="292" y="200" width="80" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="332" y="209" fill="#4f5d75">SPEECH ≥ MIN</text>
+    <rect x="584" y="200" width="72" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="620" y="209" fill="#bf4520">TRANSCRIPT</text>
+    <rect x="452" y="112" width="80" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="492" y="121" fill="#4f5d75">FINAL WORDS</text>
+    <rect x="492" y="288" width="96" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="540" y="297" fill="#4f5d75">2 S OF SILENCE</text>
+    <rect x="256" y="352" width="64" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="288" y="361" fill="#4f5d75">CONTINUE</text>
+  </g>
+
+  <!-- start and end -->
+  <circle cx="64" cy="220" r="6" fill="#2d3142"/>
+  <circle cx="904" cy="220" r="8" fill="none" stroke="#2d3142" stroke-width="1.2"/>
+  <circle cx="904" cy="220" r="5" fill="#2d3142"/>
+  <text x="904" y="244" fill="#4f5d75" font-size="9" text-anchor="middle" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace">user turn</text>
+
+  <!-- states -->
+  <g>
+    <rect x="104" y="192" width="160" height="56" rx="8" fill="#f5f5f5"/>
+    <rect x="104" y="192" width="160" height="56" rx="8" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+    <rect x="112" y="198" width="28" height="12" rx="2" fill="none" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+    <text x="126" y="207" fill="#2d3142" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">TTS</text>
+    <use href="#barge-ico-volume" x="242" y="197" width="16" height="16" color="#5a6580"/>
+    <text x="184" y="226" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Speaking</text>
+    <text x="184" y="240" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">reply playing</text>
+  </g>
+  <g>
+    <rect x="400" y="192" width="160" height="56" rx="8" fill="#f5f5f5"/>
+    <rect x="400" y="192" width="160" height="56" rx="8" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+    <rect x="408" y="198" width="32" height="12" rx="2" fill="none" stroke="rgba(191,69,32,0.50)" stroke-width="0.8"/>
+    <text x="424" y="207" fill="#bf4520" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">HOLD</text>
+    <use href="#barge-ico-pause" x="538" y="197" width="16" height="16" color="#bf4520"/>
+    <text x="480" y="226" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Paused</text>
+    <text x="480" y="240" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">waiting for words</text>
+  </g>
+  <g>
+    <rect x="680" y="192" width="160" height="56" rx="8" fill="#f5f5f5"/>
+    <rect x="680" y="192" width="160" height="56" rx="8" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+    <rect x="688" y="198" width="28" height="12" rx="2" fill="none" stroke="rgba(79,93,117,0.50)" stroke-width="0.8"/>
+    <text x="702" y="207" fill="#4f5d75" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">END</text>
+    <use href="#barge-ico-stop" x="818" y="197" width="16" height="16" color="#5a6580"/>
+    <text x="760" y="226" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Stopped</text>
+    <text x="760" y="240" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">history truncated</text>
+  </g>
+  <g>
+    <rect x="400" y="344" width="160" height="56" rx="8" fill="#f5f5f5"/>
+    <rect x="400" y="344" width="160" height="56" rx="8" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.20)" stroke-width="1" stroke-dasharray="4,3"/>
+    <rect x="408" y="350" width="40" height="12" rx="2" fill="none" stroke="rgba(45,49,66,0.22)" stroke-width="0.8"/>
+    <text x="428" y="359" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">FALSE</text>
+    <use href="#barge-ico-replay" x="538" y="349" width="16" height="16" color="#5a6580"/>
+    <text x="480" y="378" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Resumed</text>
+    <text x="480" y="392" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">cough, empty STT</text>
+  </g>
+
+  <!-- editorial callout -->
+  <text x="640" y="376" fill="#4f5d75" font-size="14" font-style="italic" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">Adaptive mode decides “backchannel or</text>
+  <text x="640" y="394" fill="#4f5d75" font-size="14" font-style="italic" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">interruption?” before the pause happens.</text>
+
+  <!-- legend -->
+  <line x1="40" y1="460" x2="960" y2="460" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+  <g font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#4f5d75">
+    <text x="40" y="488" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" letter-spacing="0.18em">LEGEND</text>
+    <line x1="112" y1="485" x2="136" y2="485" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#barge-arrow)"/>
+    <text x="144" y="488">Transition</text>
+    <line x1="220" y1="485" x2="244" y2="485" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#barge-arrow)"/>
+    <text x="252" y="488">Ignored, no state change</text>
+    <line x1="384" y1="485" x2="408" y2="485" stroke="#bf4520" stroke-width="1.4" marker-end="url(#barge-arrow-accent)"/>
+    <text x="416" y="488">Real interruption confirmed</text>
+    <rect x="560" y="480" width="14" height="10" rx="2" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.20)" stroke-dasharray="3,3"/>
+    <text x="580" y="488">False interruption</text>
+    <circle cx="694" cy="485" r="5" fill="#2d3142"/>
+    <text x="706" y="488">Start</text>
+    <circle cx="756" cy="485" r="6" fill="none" stroke="#2d3142" stroke-width="1.2"/>
+    <circle cx="756" cy="485" r="3.5" fill="#2d3142"/>
+    <text x="768" y="488">Hand the turn to the caller</text>
+  </g>
+</svg>

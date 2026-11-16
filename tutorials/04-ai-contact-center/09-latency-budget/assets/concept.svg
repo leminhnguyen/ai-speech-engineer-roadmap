@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 544" width="1000" height="544" role="img" aria-labelledby="latency-title latency-desc">
+  <title id="latency-title">One turn, from the caller's last word to the agent's first</title>
+  <desc id="latency-desc">Timeline of an unoptimized phone turn: about 100 ms of uplink and jitter buffering, a 600 ms end-of-turn wait with the final transcript arriving in parallel, about 630 ms to the LLM's first token, 400 ms to the first TTS audio and 80 ms of downlink, so the caller hears the reply after about 1.8 s, well past the 1 s target; preemptive generation can start the LLM during the end-of-turn wait.</desc>
+  <defs>
+    <symbol id="latency-ico-handset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></symbol>
+    <symbol id="latency-ico-volume" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8a5 5 0 0 1 0 8"/><path d="M17.7 5a9 9 0 0 1 0 14"/><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"/></symbol>
+  </defs>
+  <rect width="1000" height="544" fill="#f5f5f5"/>
+
+  <text x="40" y="36" fill="#bf4520" font-size="9" font-weight="500" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" letter-spacing="0.16em">MODULE 04 · LESSON 09</text>
+  <text x="40" y="66" fill="#2d3142" font-size="24" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">The silence before an answer is a sum of waits.</text>
+
+  <!-- time axis: 0..2000 ms over x = 232..952 (0.36 px per ms) -->
+  <g font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#4f5d75" text-anchor="middle" letter-spacing="0.06em">
+    <text x="232" y="104">0</text>
+    <text x="412" y="104">500 MS</text>
+    <text x="592" y="104">1 S</text>
+    <text x="772" y="104">1.5 S</text>
+    <text x="952" y="104">2 S</text>
+  </g>
+  <line x1="40" y1="112" x2="960" y2="112" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+  <g stroke="rgba(45,49,66,0.08)" stroke-width="0.8">
+    <line x1="412" y1="112" x2="412" y2="440"/>
+    <line x1="772" y1="112" x2="772" y2="440"/>
+    <line x1="952" y1="112" x2="952" y2="440"/>
+  </g>
+  <!-- 1 s target -->
+  <line x1="592" y1="112" x2="592" y2="440" stroke="#4f5d75" stroke-width="1" stroke-dasharray="5,4"/>
+  <rect x="596" y="116" width="64" height="12" rx="2" fill="#f5f5f5"/>
+  <text x="600" y="125" fill="#4f5d75" font-size="8" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" letter-spacing="0.06em">1 S TARGET</text>
+
+  <!-- row labels -->
+  <g font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#2d3142">
+    <text x="64" y="140">Uplink + jitter</text>
+    <text x="40" y="180">End-of-turn wait</text>
+    <text x="40" y="220">STT final</text>
+    <text x="40" y="260">LLM first token</text>
+    <text x="40" y="300">Preemptive LLM</text>
+    <text x="40" y="340">TTS first audio</text>
+    <text x="40" y="380">Downlink</text>
+    <text x="64" y="420">Caller hears reply</text>
+  </g>
+  <g font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="9" fill="#4f5d75">
+    <text x="64" y="152">phone → LiveKit</text>
+    <text x="40" y="192">silence + endpointing</text>
+    <text x="40" y="232">parallel with the wait</text>
+    <text x="40" y="272">rtt + ttft</text>
+    <text x="40" y="312">optional, on interim</text>
+    <text x="40" y="352">rtt + ttfb</text>
+    <text x="40" y="392">LiveKit → phone</text>
+    <text x="64" y="432">first agent audio</text>
+  </g>
+  <use href="#latency-ico-handset" x="40" y="128" width="16" height="16" color="#5a6580"/>
+  <use href="#latency-ico-volume" x="40" y="408" width="16" height="16" color="#bf4520"/>
+
+  <!-- bars (row y + 8, height 24) -->
+  <rect x="232" y="128" width="36" height="24" rx="4" fill="#f5f5f5"/>
+  <rect x="232" y="128" width="36" height="24" rx="4" fill="rgba(79,93,117,0.15)" stroke="#4f5d75" stroke-width="1"/>
+  <rect x="268" y="168" width="216" height="24" rx="4" fill="#f5f5f5"/>
+  <rect x="268" y="168" width="216" height="24" rx="4" fill="rgba(191,69,32,0.12)" stroke="#bf4520" stroke-width="1"/>
+  <text x="376" y="184" fill="#bf4520" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">600 ms</text>
+  <rect x="268" y="208" width="44" height="24" rx="4" fill="#f5f5f5"/>
+  <rect x="268" y="208" width="44" height="24" rx="4" fill="rgba(79,93,117,0.15)" stroke="#4f5d75" stroke-width="1"/>
+  <rect x="484" y="248" width="228" height="24" rx="4" fill="#f5f5f5"/>
+  <rect x="484" y="248" width="228" height="24" rx="4" fill="rgba(79,93,117,0.15)" stroke="#4f5d75" stroke-width="1"/>
+  <text x="652" y="264" fill="#2d3142" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">630 ms</text>
+  <rect x="324" y="288" width="228" height="24" rx="4" fill="#f5f5f5"/>
+  <rect x="324" y="288" width="228" height="24" rx="4" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.30)" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="438" y="304" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">starts ≈ 250 ms</text>
+  <rect x="712" y="328" width="144" height="24" rx="4" fill="#f5f5f5"/>
+  <rect x="712" y="328" width="144" height="24" rx="4" fill="rgba(79,93,117,0.15)" stroke="#4f5d75" stroke-width="1"/>
+  <text x="784" y="344" fill="#2d3142" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">400 ms</text>
+  <rect x="856" y="368" width="28" height="24" rx="4" fill="#f5f5f5"/>
+  <rect x="856" y="368" width="28" height="24" rx="4" fill="rgba(79,93,117,0.15)" stroke="#4f5d75" stroke-width="1"/>
+  <!-- milestone: first audio -->
+  <path d="M 884,408 L 892,416 L 884,424 L 876,416 Z" fill="#bf4520"/>
+  <text x="868" y="420" fill="#2d3142" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="end">≈ 1.8 s</text>
+
+  <!-- callout -->
+  <text x="232" y="472" fill="#4f5d75" font-size="14" font-style="italic" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">Preemption hides the LLM inside the wait. The reply still cannot start before the turn is committed.</text>
+
+  <!-- legend -->
+  <line x1="40" y1="492" x2="960" y2="492" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+  <g font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#4f5d75">
+    <text x="40" y="520" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" letter-spacing="0.18em">LEGEND</text>
+    <rect x="112" y="512" width="16" height="10" rx="2" fill="rgba(79,93,117,0.15)" stroke="#4f5d75"/>
+    <text x="136" y="520">Stage on the critical path</text>
+    <rect x="276" y="512" width="16" height="10" rx="2" fill="rgba(191,69,32,0.12)" stroke="#bf4520"/>
+    <text x="300" y="520">Largest tunable wait</text>
+    <rect x="420" y="512" width="16" height="10" rx="2" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.30)" stroke-dasharray="3,2"/>
+    <text x="444" y="520">Optional, runs in parallel</text>
+    <path d="M 592,511 L 598,517 L 592,523 L 586,517 Z" fill="#bf4520"/>
+    <text x="606" y="520">First audio heard</text>
+    <line x1="716" y1="517" x2="740" y2="517" stroke="#4f5d75" stroke-width="1" stroke-dasharray="5,4"/>
+    <text x="748" y="520">Target</text>
+  </g>
+</svg>

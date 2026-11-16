@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 512" width="1000" height="512" role="img" aria-labelledby="eot-title eot-desc">
+  <title id="eot-title">A pause is not an ending: fixed versus turn-aware endpointing</title>
+  <desc id="eot-desc">Timeline of a caller reading a phone number in three chunks with pauses of 0.4 and 0.8 seconds. A fixed 0.5 second silence timer expires during the second pause and the agent replies to half a number. A turn-aware timer sees a low end-of-turn probability while the number is incomplete, keeps waiting, and replies 0.5 seconds after the number is complete.</desc>
+  <rect width="1000" height="512" fill="#f5f5f5"/>
+
+  <!-- heading -->
+  <text x="40" y="36" fill="#bf4520" font-size="9" font-weight="500" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" letter-spacing="0.16em">MODULE 04 · LESSON 07</text>
+  <text x="40" y="66" fill="#2d3142" font-size="24" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">Silence alone cannot tell a pause from an ending.</text>
+
+  <!-- row guides -->
+  <g stroke="rgba(45,49,66,0.10)" stroke-width="0.8">
+    <line x1="160" y1="184" x2="960" y2="184"/>
+    <line x1="160" y1="272" x2="960" y2="272"/>
+  </g>
+
+  <!-- row labels -->
+  <g font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif">
+    <text x="40" y="138" fill="#2d3142" font-size="12" font-weight="600">Caller</text>
+    <text x="40" y="152" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace">reads a number</text>
+    <text x="40" y="226" fill="#2d3142" font-size="12" font-weight="600">Fixed timer</text>
+    <text x="40" y="240" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace">0.5 s of silence</text>
+    <text x="40" y="314" fill="#2d3142" font-size="12" font-weight="600">Turn-aware</text>
+    <text x="40" y="328" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace">min 0.5 · max 3.0 s</text>
+  </g>
+
+  <!-- caller speech chunks: 150 px per second, t=0 at x=160 -->
+  <g font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="11" text-anchor="middle">
+    <rect x="160" y="124" width="210" height="32" rx="6" fill="rgba(79,93,117,0.10)" stroke="#5a6580" stroke-width="1"/>
+    <text x="265" y="144" fill="#2d3142">số điện thoại của em là</text>
+    <rect x="430" y="124" width="90" height="32" rx="6" fill="rgba(79,93,117,0.10)" stroke="#5a6580" stroke-width="1"/>
+    <text x="475" y="144" fill="#2d3142">0903</text>
+    <rect x="640" y="124" width="150" height="32" rx="6" fill="rgba(79,93,117,0.10)" stroke="#5a6580" stroke-width="1"/>
+    <text x="715" y="144" fill="#2d3142">123 456</text>
+  </g>
+  <g font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#5a6580" text-anchor="middle" letter-spacing="0.06em">
+    <text x="400" y="172">PAUSE 0.4 S</text>
+    <text x="580" y="172">PAUSE 0.8 S</text>
+    <text x="840" y="172">DONE</text>
+  </g>
+
+  <!-- fixed timer row -->
+  <rect x="370" y="220" width="60" height="8" rx="2" fill="rgba(79,93,117,0.35)"/>
+  <rect x="520" y="220" width="75" height="8" rx="2" fill="rgba(79,93,117,0.35)"/>
+  <rect x="600" y="214" width="190" height="20" rx="4" fill="none" stroke="rgba(45,49,66,0.35)" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="695" y="227" fill="#5a6580" font-size="9" text-anchor="middle" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace">agent talks over the caller</text>
+  <circle cx="595" cy="224" r="5" fill="#bf4520"/>
+  <text x="595" y="206" fill="#bf4520" font-size="8" text-anchor="middle" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" letter-spacing="0.06em">CUT OFF</text>
+
+  <!-- turn-aware row -->
+  <rect x="370" y="308" width="60" height="8" rx="2" fill="rgba(79,93,117,0.35)"/>
+  <rect x="520" y="308" width="120" height="8" rx="2" fill="rgba(79,93,117,0.35)"/>
+  <rect x="790" y="308" width="75" height="8" rx="2" fill="rgba(79,93,117,0.35)"/>
+  <circle cx="865" cy="312" r="5" fill="#bf4520"/>
+  <text x="876" y="315" fill="#bf4520" font-size="8" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" letter-spacing="0.06em">REPLY</text>
+  <g font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#4f5d75" text-anchor="middle" letter-spacing="0.04em">
+    <text x="400" y="298">p=0.00 · WAIT</text>
+    <text x="580" y="298">p=0.07 · WAIT</text>
+    <text x="828" y="298">p=0.60 · GO</text>
+  </g>
+
+  <!-- time axis -->
+  <line x1="160" y1="360" x2="960" y2="360" stroke="#4f5d75" stroke-width="1"/>
+  <g stroke="#4f5d75" stroke-width="1">
+    <line x1="160" y1="360" x2="160" y2="366"/>
+    <line x1="310" y1="360" x2="310" y2="366"/>
+    <line x1="460" y1="360" x2="460" y2="366"/>
+    <line x1="610" y1="360" x2="610" y2="366"/>
+    <line x1="760" y1="360" x2="760" y2="366"/>
+    <line x1="910" y1="360" x2="910" y2="366"/>
+  </g>
+  <g font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#5a6580" text-anchor="middle">
+    <text x="160" y="378">0 s</text>
+    <text x="310" y="378">1 s</text>
+    <text x="460" y="378">2 s</text>
+    <text x="610" y="378">3 s</text>
+    <text x="760" y="378">4 s</text>
+    <text x="910" y="378">5 s</text>
+  </g>
+
+  <!-- editorial callouts -->
+  <g font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#4f5d75" text-anchor="middle">
+    <text x="500" y="416">The fixed timer answers “0903” as if it were the whole number.</text>
+    <text x="500" y="436">The turn-aware timer waits while the number is open, then replies 0.5 s after it closes.</text>
+  </g>
+
+  <!-- legend strip -->
+  <line x1="40" y1="460" x2="960" y2="460" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+  <g font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#4f5d75">
+    <text x="40" y="484" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" letter-spacing="0.18em">LEGEND</text>
+    <rect x="112" y="476" width="20" height="12" rx="3" fill="rgba(79,93,117,0.10)" stroke="#5a6580" stroke-width="1"/>
+    <text x="140" y="485">Caller speech</text>
+    <rect x="232" y="478" width="24" height="8" rx="2" fill="rgba(79,93,117,0.35)"/>
+    <text x="264" y="485">Silence timer running</text>
+    <circle cx="384" cy="482" r="5" fill="#bf4520"/>
+    <text x="396" y="485">Timer expires: the agent replies</text>
+    <text x="568" y="485" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8">p = end-of-turn probability from the words so far</text>
+  </g>
+</svg>
