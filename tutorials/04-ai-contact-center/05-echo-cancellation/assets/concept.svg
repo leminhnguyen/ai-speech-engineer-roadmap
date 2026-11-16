@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480" role="img" aria-labelledby="echo-loop-title echo-loop-desc">
+  <title id="echo-loop-title">The echo loop of a phone voice agent</title>
+  <desc id="echo-loop-desc">The agent's synthesized voice travels through the phone network to the caller's handset speaker, leaks through the echo path into the handset microphone together with the caller's voice, and returns toward the agent's VAD and STT; an echo canceller fed with a reference copy of the far-end signal subtracts the echo, otherwise the agent detects its own voice as a false barge-in and stops speaking.</desc>
+  <defs>
+    <marker id="echo-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+    <marker id="echo-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+    <marker id="echo-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+    <symbol id="echo-ico-robot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4"/><path d="M12 2v2"/><path d="M9 12v9"/><path d="M15 12v9"/><path d="M5 16l4 -2"/><path d="M15 14l4 2"/><path d="M9 18h6"/><path d="M10 8v.01"/><path d="M14 8v.01"/></symbol>
+    <symbol id="echo-ico-handset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></symbol>
+    <symbol id="echo-ico-volume" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8a5 5 0 0 1 0 8"/><path d="M17.7 5a9 9 0 0 1 0 14"/><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"/></symbol>
+    <symbol id="echo-ico-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5a3 3 0 0 1 6 0v5a3 3 0 0 1 -6 0z"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+    <symbol id="echo-ico-filter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"/></symbol>
+    <symbol id="echo-ico-ear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3a4.5 4.5 0 0 1 -6.8 1.4"/><path d="M10 10a3 3 0 1 1 5 2.2"/></symbol>
+    <symbol id="echo-ico-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"/><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/></symbol>
+  </defs>
+  <rect width="1000" height="480" fill="#f5f5f5"/>
+
+  <!-- heading -->
+  <text x="40" y="36" fill="#bf4520" font-size="9" font-weight="500" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" letter-spacing="0.16em">MODULE 04 · LESSON 05</text>
+  <text x="40" y="66" fill="#2d3142" font-size="24" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">The agent's own voice comes back. Something must subtract it.</text>
+
+  <!-- connectors (drawn before boxes) -->
+  <line x1="208" y1="140" x2="340" y2="140" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#echo-arrow)"/>
+  <line x1="512" y1="140" x2="644" y2="140" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#echo-arrow)"/>
+  <line x1="732" y1="168" x2="732" y2="300" stroke="#bf4520" stroke-width="1.4" marker-end="url(#echo-arrow-accent)"/>
+  <line x1="864" y1="332" x2="820" y2="332" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#echo-arrow)"/>
+  <line x1="648" y1="332" x2="516" y2="332" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#echo-arrow)"/>
+  <line x1="344" y1="332" x2="212" y2="332" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#echo-arrow)"/>
+  <line x1="428" y1="168" x2="428" y2="300" stroke="#2e5aa8" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#echo-arrow-link)"/>
+  <line x1="124" y1="304" x2="124" y2="172" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#echo-arrow)"/>
+
+  <!-- connector labels: opaque masks with a gap from the stroke -->
+  <g font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" text-anchor="middle" letter-spacing="0.06em">
+    <rect x="242" y="120" width="68" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="276" y="129" fill="#4f5d75">AGENT VOICE</text>
+    <rect x="552" y="120" width="56" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="580" y="129" fill="#4f5d75">G.711 RTP</text>
+    <rect x="740" y="230" width="56" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="768" y="239" fill="#bf4520">ECHO PATH</text>
+    <rect x="820" y="312" width="40" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="840" y="321" fill="#4f5d75">VOICE</text>
+    <rect x="544" y="312" width="72" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="580" y="321" fill="#4f5d75">ECHO + VOICE</text>
+    <rect x="250" y="312" width="52" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="276" y="321" fill="#4f5d75">RESIDUAL</text>
+    <rect x="352" y="230" width="68" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="386" y="239" fill="#2e5aa8">FAR-END REF</text>
+    <rect x="132" y="230" width="84" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="174" y="239" fill="#4f5d75">FALSE BARGE-IN</text>
+  </g>
+
+  <!-- nodes -->
+  <g font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif">
+    <!-- Agent TTS (backend) -->
+    <rect x="40" y="112" width="168" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="40" y="112" width="168" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+    <rect x="48" y="118" width="28" height="12" rx="2" fill="none" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+    <text x="62" y="127" fill="#2d3142" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">TTS</text>
+    <use href="#echo-ico-robot" x="186" y="117" width="16" height="16" color="#5a6580"/>
+    <text x="124" y="146" fill="#2d3142" font-size="12" font-weight="600" text-anchor="middle">Agent speaks</text>
+    <text x="124" y="160" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">far-end signal x(n)</text>
+
+    <!-- Phone network (external) -->
+    <rect x="344" y="112" width="168" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="344" y="112" width="168" height="56" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+    <rect x="352" y="118" width="28" height="12" rx="2" fill="none" stroke="rgba(45,49,66,0.22)" stroke-width="0.8"/>
+    <text x="366" y="127" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">EXT</text>
+    <use href="#echo-ico-handset" x="490" y="117" width="16" height="16" color="#5a6580"/>
+    <text x="428" y="146" fill="#2d3142" font-size="12" font-weight="600" text-anchor="middle">Phone network</text>
+    <text x="428" y="160" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">LiveKit SIP · carrier</text>
+
+    <!-- Handset speaker (user side) -->
+    <rect x="648" y="112" width="168" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="648" y="112" width="168" height="56" rx="6" fill="rgba(79,93,117,0.10)" stroke="#5a6580" stroke-width="1"/>
+    <rect x="656" y="118" width="34" height="12" rx="2" fill="none" stroke="rgba(90,101,128,0.40)" stroke-width="0.8"/>
+    <text x="673" y="127" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">USER</text>
+    <use href="#echo-ico-volume" x="794" y="117" width="16" height="16" color="#5a6580"/>
+    <text x="732" y="146" fill="#2d3142" font-size="12" font-weight="600" text-anchor="middle">Handset speaker</text>
+    <text x="732" y="160" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">earpiece · speakerphone</text>
+
+    <!-- VAD + STT (backend) -->
+    <rect x="40" y="304" width="168" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="40" y="304" width="168" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+    <rect x="48" y="310" width="28" height="12" rx="2" fill="none" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+    <text x="62" y="319" fill="#2d3142" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">STT</text>
+    <use href="#echo-ico-ear" x="186" y="309" width="16" height="16" color="#5a6580"/>
+    <text x="124" y="338" fill="#2d3142" font-size="12" font-weight="600" text-anchor="middle">VAD + STT</text>
+    <text x="124" y="352" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">is the caller talking?</text>
+
+    <!-- Echo canceller (focal) -->
+    <rect x="344" y="304" width="168" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="344" y="304" width="168" height="56" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+    <rect x="352" y="310" width="28" height="12" rx="2" fill="none" stroke="rgba(191,69,32,0.50)" stroke-width="0.8"/>
+    <text x="366" y="319" fill="#bf4520" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">AEC</text>
+    <use href="#echo-ico-filter" x="490" y="309" width="16" height="16" color="#bf4520"/>
+    <text x="428" y="338" fill="#2d3142" font-size="12" font-weight="600" text-anchor="middle">Echo canceller</text>
+    <text x="428" y="352" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">NLMS · DTD · NLP</text>
+
+    <!-- Handset mic (user side) -->
+    <rect x="648" y="304" width="168" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="648" y="304" width="168" height="56" rx="6" fill="rgba(79,93,117,0.10)" stroke="#5a6580" stroke-width="1"/>
+    <rect x="656" y="310" width="34" height="12" rx="2" fill="none" stroke="rgba(90,101,128,0.40)" stroke-width="0.8"/>
+    <text x="673" y="319" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">USER</text>
+    <use href="#echo-ico-mic" x="794" y="309" width="16" height="16" color="#5a6580"/>
+    <text x="732" y="338" fill="#2d3142" font-size="12" font-weight="600" text-anchor="middle">Handset mic</text>
+    <text x="732" y="352" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">d(n) = echo + voice</text>
+
+    <!-- Caller (input) -->
+    <rect x="864" y="304" width="96" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="864" y="304" width="96" height="56" rx="6" fill="rgba(79,93,117,0.10)" stroke="#5a6580" stroke-width="1"/>
+    <use href="#echo-ico-user" x="938" y="309" width="16" height="16" color="#5a6580"/>
+    <text x="912" y="338" fill="#2d3142" font-size="12" font-weight="600" text-anchor="middle">Caller</text>
+    <text x="912" y="352" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">near end</text>
+  </g>
+
+  <!-- editorial callout -->
+  <text x="500" y="404" fill="#4f5d75" font-size="14" font-style="italic" text-anchor="middle" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">Echo is the agent's own voice, only 6–20 dB quieter: loud enough for a VAD to call it a barge-in.</text>
+
+  <!-- legend strip -->
+  <line x1="40" y1="428" x2="960" y2="428" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+  <g font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#4f5d75">
+    <text x="40" y="452" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" letter-spacing="0.18em">LEGEND</text>
+    <line x1="112" y1="449" x2="136" y2="449" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#echo-arrow)"/>
+    <text x="144" y="452">Audio path</text>
+    <line x1="224" y1="449" x2="248" y2="449" stroke="#bf4520" stroke-width="1.4" marker-end="url(#echo-arrow-accent)"/>
+    <text x="256" y="452">Echo leak</text>
+    <line x1="336" y1="449" x2="360" y2="449" stroke="#2e5aa8" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#echo-arrow-link)"/>
+    <text x="368" y="452">Reference copy of the far end</text>
+    <line x1="528" y1="449" x2="552" y2="449" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#echo-arrow)"/>
+    <text x="560" y="452">Control: agent stops speaking</text>
+    <rect x="716" y="444" width="14" height="10" rx="2" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+    <text x="736" y="452">Where cancellation happens</text>
+  </g>
+</svg>

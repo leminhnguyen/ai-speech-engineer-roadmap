@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 648" width="1000" height="648" role="img" aria-labelledby="sip-call-title sip-call-desc">
+  <title id="sip-call-title">Anatomy of a phone call to a voice agent</title>
+  <desc id="sip-call-desc">Sequence diagram of an inbound phone call: the carrier sends a SIP INVITE with an SDP offer to LiveKit SIP, which answers, dispatches an agent into a room, and after the ACK the caller's voice flows as G.711 RTP packets that LiveKit bridges into room audio, until a BYE ends the call.</desc>
+  <defs>
+    <marker id="sip-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+    <marker id="sip-arrow-bi" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+    <marker id="sip-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+    <marker id="sip-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+    <symbol id="sip-ico-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14"/><path d="M11 4h2"/><path d="M12 17v.01"/></symbol>
+    <symbol id="sip-ico-handset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></symbol>
+    <symbol id="sip-ico-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3"/><path d="M3 15a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -2"/><path d="M7 8l0 .01"/><path d="M7 16l0 .01"/></symbol>
+    <symbol id="sip-ico-robot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4"/><path d="M12 2v2"/><path d="M9 12v9"/><path d="M15 12v9"/><path d="M5 16l4 -2"/><path d="M15 14l4 2"/><path d="M9 18h6"/><path d="M10 8v.01"/><path d="M14 8v.01"/></symbol>
+  </defs>
+  <rect width="1000" height="648" fill="#f5f5f5"/>
+
+  <!-- heading -->
+  <text x="40" y="36" fill="#bf4520" font-size="9" font-weight="500" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" letter-spacing="0.16em">MODULE 04 · LESSON 01</text>
+  <text x="40" y="66" fill="#2d3142" font-size="24" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">Signaling sets the call up. Media carries the voice.</text>
+
+  <!-- lifelines -->
+  <g stroke="rgba(45,49,66,0.22)" stroke-width="1" stroke-dasharray="3,3">
+    <line x1="128" y1="152" x2="128" y2="572"/>
+    <line x1="368" y1="152" x2="368" y2="572"/>
+    <line x1="624" y1="152" x2="624" y2="572"/>
+    <line x1="872" y1="152" x2="872" y2="572"/>
+  </g>
+
+  <!-- messages (arrows before labels and boxes) -->
+  <line x1="128" y1="196" x2="364" y2="196" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#sip-arrow)"/>
+  <line x1="368" y1="236" x2="620" y2="236" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#sip-arrow-link)"/>
+  <line x1="624" y1="276" x2="372" y2="276" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#sip-arrow)"/>
+  <line x1="624" y1="316" x2="868" y2="316" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#sip-arrow)"/>
+  <line x1="624" y1="356" x2="372" y2="356" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#sip-arrow)"/>
+  <line x1="368" y1="396" x2="620" y2="396" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#sip-arrow-link)"/>
+  <!-- media: three hops on one row -->
+  <line x1="136" y1="452" x2="360" y2="452" stroke="#4f5d75" stroke-width="1.2" marker-start="url(#sip-arrow-bi)" marker-end="url(#sip-arrow-bi)"/>
+  <line x1="376" y1="452" x2="616" y2="452" stroke="#bf4520" stroke-width="1.4" marker-start="url(#sip-arrow-accent)" marker-end="url(#sip-arrow-accent)"/>
+  <line x1="632" y1="452" x2="864" y2="452" stroke="#4f5d75" stroke-width="1.2" marker-start="url(#sip-arrow-bi)" marker-end="url(#sip-arrow-bi)"/>
+  <line x1="368" y1="524" x2="620" y2="524" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#sip-arrow-link)"/>
+  <line x1="624" y1="556" x2="372" y2="556" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#sip-arrow)"/>
+
+  <!-- message labels: opaque mask, 8px gap above the stroke -->
+  <g font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" text-anchor="middle" letter-spacing="0.06em">
+    <rect x="212" y="176" width="72" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="248" y="185" fill="#4f5d75">DIAL HOTLINE</text>
+    <rect x="460" y="216" width="72" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="496" y="225" fill="#2e5aa8">INVITE + SDP</text>
+    <rect x="464" y="256" width="64" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="496" y="265" fill="#4f5d75">100 TRYING</text>
+    <rect x="704" y="296" width="88" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="748" y="305" fill="#4f5d75">DISPATCH AGENT</text>
+    <rect x="460" y="336" width="72" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="496" y="345" fill="#4f5d75">200 OK + SDP</text>
+    <rect x="480" y="376" width="32" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="496" y="385" fill="#2e5aa8">ACK</text>
+    <rect x="216" y="432" width="64" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="248" y="441" fill="#4f5d75">PSTN VOICE</text>
+    <rect x="456" y="432" width="80" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="496" y="441" fill="#bf4520">RTP · G.711</text>
+    <rect x="716" y="432" width="64" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="748" y="441" fill="#4f5d75">ROOM AUDIO</text>
+    <rect x="480" y="504" width="32" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="496" y="513" fill="#2e5aa8">BYE</text>
+    <rect x="472" y="536" width="48" height="12" rx="2" fill="#f5f5f5"/>
+    <text x="496" y="545" fill="#4f5d75">200 OK</text>
+  </g>
+
+  <!-- editorial callout under the media row -->
+  <text x="496" y="480" fill="#4f5d75" font-size="14" font-style="italic" text-anchor="middle" font-family="'Instrument Serif', Georgia, 'Times New Roman', serif">160 bytes every 20 ms, each way</text>
+
+  <!-- actors (drawn last) -->
+  <g>
+    <rect x="40" y="96" width="176" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="40" y="96" width="176" height="56" rx="6" fill="rgba(79,93,117,0.10)" stroke="#5a6580" stroke-width="1"/>
+    <rect x="48" y="102" width="34" height="12" rx="2" fill="none" stroke="rgba(90,101,128,0.40)" stroke-width="0.8"/>
+    <text x="65" y="111" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">USER</text>
+    <use href="#sip-ico-mobile" x="194" y="101" width="16" height="16" color="#5a6580"/>
+    <text x="128" y="130" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Caller</text>
+    <text x="128" y="144" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">mobile or landline</text>
+  </g>
+  <g>
+    <rect x="280" y="96" width="176" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="280" y="96" width="176" height="56" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+    <rect x="288" y="102" width="28" height="12" rx="2" fill="none" stroke="rgba(45,49,66,0.22)" stroke-width="0.8"/>
+    <text x="302" y="111" fill="#5a6580" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">EXT</text>
+    <use href="#sip-ico-handset" x="434" y="101" width="16" height="16" color="#5a6580"/>
+    <text x="368" y="130" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Carrier · SIP trunk</text>
+    <text x="368" y="144" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">PSTN gateway</text>
+  </g>
+  <g>
+    <rect x="536" y="96" width="176" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="536" y="96" width="176" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+    <rect x="544" y="102" width="28" height="12" rx="2" fill="none" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+    <text x="558" y="111" fill="#2d3142" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.08em">SIP</text>
+    <use href="#sip-ico-server" x="690" y="101" width="16" height="16" color="#5a6580"/>
+    <text x="624" y="130" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">LiveKit SIP</text>
+    <text x="624" y="144" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">udp/tcp 5060 · rtp</text>
+  </g>
+  <g>
+    <rect x="784" y="96" width="176" height="56" rx="6" fill="#f5f5f5"/>
+    <rect x="784" y="96" width="176" height="56" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+    <rect x="792" y="102" width="40" height="12" rx="2" fill="none" stroke="rgba(191,69,32,0.50)" stroke-width="0.8"/>
+    <text x="812" y="111" fill="#bf4520" font-size="7" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle" letter-spacing="0.06em">AGENT</text>
+    <use href="#sip-ico-robot" x="938" y="101" width="16" height="16" color="#bf4520"/>
+    <text x="872" y="130" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">Room + voice agent</text>
+    <text x="872" y="144" fill="#4f5d75" font-size="9" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" text-anchor="middle">one room per call</text>
+  </g>
+
+  <!-- legend strip -->
+  <line x1="40" y1="592" x2="960" y2="592" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+  <g font-family="'Geist', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#4f5d75">
+    <text x="40" y="616" font-family="'Geist Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="8" letter-spacing="0.18em">LEGEND</text>
+    <line x1="112" y1="613" x2="136" y2="613" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#sip-arrow-link)"/>
+    <text x="144" y="616">SIP request</text>
+    <line x1="232" y1="613" x2="256" y2="613" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#sip-arrow)"/>
+    <text x="264" y="616">SIP response</text>
+    <line x1="360" y1="613" x2="384" y2="613" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#sip-arrow)"/>
+    <text x="392" y="616">Action / platform step</text>
+    <line x1="524" y1="613" x2="564" y2="613" stroke="#bf4520" stroke-width="1.4" marker-start="url(#sip-arrow-accent)" marker-end="url(#sip-arrow-accent)"/>
+    <text x="572" y="616">Two-way audio (RTP media)</text>
+  </g>
+</svg>
