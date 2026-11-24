@@ -1,65 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 250" width="320" height="250" role="img" aria-labelledby="title desc">
   <title id="title">SOTA Tracker</title>
-  <desc id="desc">A radar sweeps in a circle and new blips light up, next to a list of tracked topics: speech LMs, full-duplex dialogue, neural codecs, and zero-shot TTS.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#22123f"/>
-      <stop offset="1" stop-color="#7b1f5c"/>
-    </linearGradient>
-    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ff7ad9" stop-opacity="0"/>
-      <stop offset="1" stop-color="#ff7ad9" stop-opacity="0.55"/>
-    </linearGradient>
-  </defs>
+  <desc id="desc">Pillar 03, SOTA Tracker: a snail with headphones looks through a telescope at pulsing stars while a paper tagged NEW floats nearby. What's new, and why it matters.</desc>
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4f5d75"/></marker></defs>
   <style>
-    .font { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
-    .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; fill: #ff7ad9; }
-    .title { font-size: 24px; font-weight: 800; fill: #ffffff; }
-    .tagline { font-size: 12.5px; fill: #f0c6e4; }
-    .ring { fill: none; stroke: #ffffff2b; stroke-width: 1; }
-    .sweep { animation: spin 4s linear infinite; }
-    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-    .blip { fill: #ffd1f1; transform-box: fill-box; transform-origin: center;
-            animation: ping 4s ease-out infinite; opacity: 0; }
-    .b2 { animation-delay: 1s; } .b3 { animation-delay: 2.2s; } .b4 { animation-delay: 3.1s; }
-    @keyframes ping { 0% { opacity: 1; transform: scale(1.8); } 15% { transform: scale(1); } 70% { opacity: 0.25; } 100% { opacity: 0; } }
-    .pill rect { fill: #ffffff1a; stroke: #ff7ad966; }
-    .pill text { font-size: 10px; font-weight: 600; fill: #ffe3f6; }
-    .pill { opacity: 0; animation: show 8s ease-out infinite; }
-    .p2 { animation-delay: 0.6s; } .p3 { animation-delay: 1.2s; } .p4 { animation-delay: 1.8s; }
-    @keyframes show { 0% { opacity: 0; transform: translateX(-8px); } 8%, 85% { opacity: 1; transform: translateX(0); } 100% { opacity: 0; } }
-    @media (prefers-reduced-motion: reduce) {
-      .sweep, .blip, .pill { animation: none; }
-      .blip, .pill { opacity: 1; }
-    }
+    .tag { font-family: 'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-weight: 500; letter-spacing: .08em; }
+    .h { font-family: Geist,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; font-weight: 600; fill: #2d3142; }
+    .s { font-family: Geist,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; fill: #4f5d75; }
+    .c { font-family: 'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+    .serif { font-family: 'Instrument Serif',Georgia,'Times New Roman',serif; font-style: italic; fill: #4f5d75; }
+    .flow { stroke-dasharray: 2 5; stroke-linecap: round; animation: flow .9s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -14; } }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+    .bob { animation: bob 2.4s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translate(0,0); } 50% { transform: translate(0,-3px); } }
+    .bar { transform-box: fill-box; transform-origin: 50% 100%; animation: bar .9s ease-in-out infinite; }
+    @keyframes bar { 0%,100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+    .blink { transform-box: fill-box; transform-origin: center; animation: blink 4s infinite; }
+    @keyframes blink { 0%,93%,100% { transform: scaleY(1); } 96% { transform: scaleY(.1); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
-
-  <rect width="320" height="220" rx="16" fill="url(#bg)"/>
-  <text x="24" y="34" class="font eyebrow">PILLAR 03</text>
-  <text x="24" y="62" class="font title">SOTA Tracker</text>
-  <text x="24" y="82" class="font tagline">What's new, and why it matters</text>
-
-  <g class="font">
-    <g class="pill p1"><rect x="24" y="100" width="98" height="20" rx="10"/><text x="36" y="114">Speech LMs</text></g>
-    <g class="pill p2"><rect x="24" y="126" width="98" height="20" rx="10"/><text x="36" y="140">Full-duplex</text></g>
-    <g class="pill p3"><rect x="24" y="152" width="98" height="20" rx="10"/><text x="36" y="166">Neural codecs</text></g>
-    <g class="pill p4"><rect x="24" y="178" width="98" height="20" rx="10"/><text x="36" y="192">Zero-shot TTS</text></g>
-  </g>
-
-  <g transform="translate(228 146)">
-    <circle class="ring" r="22"/>
-    <circle class="ring" r="44"/>
-    <circle class="ring" r="64"/>
-    <line class="ring" x1="-64" y1="0" x2="64" y2="0"/>
-    <line class="ring" x1="0" y1="-64" x2="0" y2="64"/>
-    <g class="sweep">
-      <path d="M0 0 L64 0 A64 64 0 0 0 49 -41 Z" fill="url(#beam)"/>
-      <line x1="0" y1="0" x2="64" y2="0" stroke="#ff7ad9" stroke-width="1.5"/>
-    </g>
-    <circle class="blip b1" cx="36" cy="22" r="3.5"/>
-    <circle class="blip b2" cx="-18" cy="40" r="3.5"/>
-    <circle class="blip b3" cx="-40" cy="-20" r="3.5"/>
-    <circle class="blip b4" cx="14" cy="-48" r="3.5"/>
-    <circle r="3" fill="#ff7ad9"/>
-  </g>
+  <rect x="1" y="1" width="318" height="248" rx="10" fill="#f7f3ec"/>
+  <rect x="8" y="8" width="304" height="234" rx="8" fill="#fdf1ec" stroke="#bf4520" stroke-width="1.4" stroke-dasharray="5 3"/>
+  <text x="22" y="32" class="tag" font-size="10.5" fill="#bf4520">03 · SOTA TRACKER</text>
+  
+  <path class="pulse" style="animation-delay:0s" fill="#8f6a2e" d="M150 46 Q151.2 50.8 156 52 Q151.2 53.2 150 58 Q148.8 53.2 144 52 Q148.8 50.8 150 46 Z"/><path class="pulse" style="animation-delay:-0.8s" fill="#8f6a2e" d="M190 72 Q190.8 75.2 194 76 Q190.8 76.8 190 80 Q189.2 76.8 186 76 Q189.2 75.2 190 72 Z"/><path class="pulse" style="animation-delay:-1.6s" fill="#8f6a2e" d="M132 82.5 Q132.7 85.3 135.5 86 Q132.7 86.7 132 89.5 Q131.3 86.7 128.5 86 Q131.3 85.3 132 82.5 Z"/>
+  <line x1="122" y1="120" x2="108" y2="146" stroke="#2d3142" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="122" y1="120" x2="136" y2="146" stroke="#2d3142" stroke-width="1.4" stroke-linecap="round"/>
+  <g transform="rotate(-30 122 114)"><rect x="88" y="106" width="70" height="16" rx="3" fill="#3d6390"/>
+    <rect x="152" y="102" width="12" height="24" rx="3" fill="#fff" stroke="#2d3142" stroke-width="1.3"/></g>
+  <g class="bob"><g transform="rotate(6 246 92)">
+    <rect x="218" y="56" width="56" height="72" rx="4" fill="#fff" stroke="#2d3142" stroke-width="1.3"/>
+    <g stroke="#9aa3b5" stroke-width="1.6" stroke-linecap="round"><line x1="228" y1="80" x2="264" y2="80"/><line x1="228" y1="90" x2="260" y2="90"/><line x1="228" y1="100" x2="264" y2="100"/><line x1="228" y1="110" x2="252" y2="110"/></g>
+    <rect x="226" y="62" width="32" height="12" rx="2" fill="#bf4520"/>
+    <text x="242" y="71" class="tag" font-size="8" fill="#fff" text-anchor="middle">NEW</text></g></g>
+  
+  <g transform="translate(48 146) scale(0.42)"><g class="bob" stroke-linejoin="round" stroke-linecap="round">
+    <path fill="#f1d9c4" stroke="#2d3142" stroke-width="3.333333333333333" d="M-78 0 Q-86 -16 -60 -18 L34 -18 Q44 -18 46 -34 L48 -62 Q50 -80 67 -80 Q84 -80 85 -62 L84 -16 Q83 0 66 0 Z"/>
+    <line stroke="#2d3142" stroke-width="3.333333333333333" x1="58" y1="-77" x2="51" y2="-102"/>
+    <line stroke="#2d3142" stroke-width="3.333333333333333" x1="77" y1="-77" x2="84" y2="-102"/>
+    <g class="blink"><circle cx="50" cy="-106" r="8" fill="#fff" stroke="#2d3142" stroke-width="3.333333333333333"/><circle cx="52" cy="-105" r="3.6" fill="#2d3142"/></g>
+    <g class="blink"><circle cx="85" cy="-106" r="8" fill="#fff" stroke="#2d3142" stroke-width="3.333333333333333"/><circle cx="87" cy="-105" r="3.6" fill="#2d3142"/></g>
+    <path fill="none" stroke="#3d6390" stroke-width="5.71" d="M44 -66 Q66 -98 89 -66"/>
+    <rect x="38" y="-71" width="11" height="20" rx="4" fill="#3d6390"/>
+    <rect x="84" y="-71" width="11" height="20" rx="4" fill="#3d6390"/>
+    <path fill="none" stroke="#2d3142" stroke-width="3.333333333333333" d="M62 -40 Q69 -34 76 -40"/>
+    <circle cx="-8" cy="-50" r="42" fill="#fdf1ec" stroke="#bf4520" stroke-width="5.24"/>
+    <path fill="none" stroke="#bf4520" stroke-width="4.76" d="M-8 -50 m-4 0 a4 4 0 1 1 8 2 a10 10 0 1 1 -18 -6 a17 17 0 1 1 30 14 a24 24 0 1 1 -40 -24"/>
+  </g></g>
+  <text x="22" y="178" class="h" font-size="18">What's new, and why</text>
+  <text x="22" y="198" class="s" font-size="11.5">dated, curated, one line each</text><text x="22" y="213" class="s" font-size="11.5">speech LMs · duplex · TTS · ASR</text>
+  <rect x="20" y="222" width="161" height="16" rx="3" fill="#f3f1ec"/>
+  <text x="26" y="233.5" class="c" font-size="10" fill="#2d3142">31 entries · 8 tracks</text>
+  <g transform="translate(252 227)"><rect x="0" width="10" height="6" rx="1" fill="#bf4520"/><rect x="12" width="10" height="6" rx="1" fill="#bf4520"/><rect x="24" width="10" height="6" rx="1" fill="#bf4520"/><rect x="36" width="10" height="6" rx="1" fill="#bf4520"/></g>
 </svg>
