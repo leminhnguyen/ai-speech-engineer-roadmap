@@ -1,48 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 250" width="320" height="250" role="img" aria-labelledby="title desc">
   <title id="title">Roadmap</title>
-  <desc id="desc">A glowing dot travels along a winding path through four stages: Foundations, Tools, Core Speech, and SOTA.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b2240"/>
-      <stop offset="1" stop-color="#1a5276"/>
-    </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
+  <desc id="desc">Pillar 01, Roadmap: a small snail walks a dashed path through four milestones, Basics, Tools, Core and SOTA. What to learn, in order.</desc>
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4f5d75"/></marker></defs>
   <style>
-    .font { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
-    .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; fill: #7fd3ff; }
-    .title { font-size: 24px; font-weight: 800; fill: #ffffff; }
-    .tagline { font-size: 12.5px; fill: #b9d3ee; }
-    .label { font-size: 10px; font-weight: 600; fill: #dbe9f7; text-anchor: middle; }
-    .track { fill: none; stroke: #ffffff2e; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 6; }
-    .comet { fill: none; stroke: #7fd3ff; stroke-width: 4; stroke-linecap: round;
-             stroke-dasharray: 12 100; animation: run 4s linear infinite; }
-    @keyframes run { from { stroke-dashoffset: 12; } to { stroke-dashoffset: -100; } }
-    .node { fill: #0b2240; stroke: #7fd3ff; stroke-width: 2.5; animation: lit 4s ease-out infinite; }
-    .n2 { animation-delay: 1.3s; } .n3 { animation-delay: 2.6s; } .n4 { animation-delay: 3.9s; }
-    @keyframes lit { 0% { fill: #7fd3ff; } 30%, 100% { fill: #0b2240; } }
-    @media (prefers-reduced-motion: reduce) { .comet, .node { animation: none; } }
+    .tag { font-family: 'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-weight: 500; letter-spacing: .08em; }
+    .h { font-family: Geist,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; font-weight: 600; fill: #2d3142; }
+    .s { font-family: Geist,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; fill: #4f5d75; }
+    .c { font-family: 'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+    .serif { font-family: 'Instrument Serif',Georgia,'Times New Roman',serif; font-style: italic; fill: #4f5d75; }
+    .flow { stroke-dasharray: 2 5; stroke-linecap: round; animation: flow .9s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -14; } }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+    .bob { animation: bob 2.4s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translate(0,0); } 50% { transform: translate(0,-3px); } }
+    .bar { transform-box: fill-box; transform-origin: 50% 100%; animation: bar .9s ease-in-out infinite; }
+    @keyframes bar { 0%,100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+    .blink { transform-box: fill-box; transform-origin: center; animation: blink 4s infinite; }
+    @keyframes blink { 0%,93%,100% { transform: scaleY(1); } 96% { transform: scaleY(.1); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
-
-  <rect width="320" height="220" rx="16" fill="url(#bg)"/>
-  <text x="24" y="34" class="font eyebrow">PILLAR 01</text>
-  <text x="24" y="62" class="font title">Roadmap</text>
-  <text x="24" y="82" class="font tagline">What to learn, and in what order</text>
-
-  <path class="track" d="M40 172 C 80 172, 80 128, 120 128 S 160 168, 200 168 S 240 122, 280 122"/>
-  <path class="comet" filter="url(#glow)" pathLength="100"
-        d="M40 172 C 80 172, 80 128, 120 128 S 160 168, 200 168 S 240 122, 280 122"/>
-
-  <circle class="node n1" cx="40" cy="172" r="7"/>
-  <circle class="node n2" cx="120" cy="128" r="7"/>
-  <circle class="node n3" cx="200" cy="168" r="7"/>
-  <circle class="node n4" cx="280" cy="122" r="7"/>
-
-  <text x="44" y="198" class="font label">Foundations</text>
-  <text x="120" y="154" class="font label">Tools</text>
-  <text x="200" y="194" class="font label">Core Speech</text>
-  <text x="280" y="148" class="font label">SOTA</text>
+  <rect x="1" y="1" width="318" height="248" rx="10" fill="#f7f3ec"/>
+  <rect x="8" y="8" width="304" height="234" rx="8" fill="#fff" stroke="#3d6390" stroke-width="1.4"/>
+  <text x="22" y="32" class="tag" font-size="10.5" fill="#3d6390">01 · ROADMAP</text>
+  
+  <path d="M54 134 C86 134 86 96 122 98 S172 128 208 114 S262 66 290 62" fill="none" stroke="#e4e1da" stroke-width="8" stroke-linecap="round"/>
+  <path class="flow" d="M54 134 C86 134 86 96 122 98 S172 128 208 114 S262 66 290 62" fill="none" stroke="#4f5d75" stroke-width="1.6"/>
+  <circle cx="70" cy="133" r="6" fill="#fff" stroke="#4f6b45" stroke-width="2"/><text x="70" y="153" class="tag" font-size="8.5" fill="#4f6b45" text-anchor="start">BASICS</text><circle cx="122" cy="98" r="6" fill="#fff" stroke="#8f6a2e" stroke-width="2"/><text x="122" y="86" class="tag" font-size="8.5" fill="#8f6a2e" text-anchor="middle">TOOLS</text><circle cx="208" cy="114" r="6" fill="#fff" stroke="#3d6390" stroke-width="2"/><text x="208" y="134" class="tag" font-size="8.5" fill="#3d6390" text-anchor="middle">CORE</text><circle cx="290" cy="62" r="6" fill="#fff" stroke="#bf4520" stroke-width="2"/><text x="290" y="50" class="tag" font-size="8.5" fill="#bf4520" text-anchor="end">SOTA</text>
+  <g><g transform="translate(0 -4)">
+  <g transform="translate(0 0) scale(0.24)"><g class="" stroke-linejoin="round" stroke-linecap="round">
+    <path fill="#f1d9c4" stroke="#2d3142" stroke-width="5.833333333333333" d="M-78 0 Q-86 -16 -60 -18 L34 -18 Q44 -18 46 -34 L48 -62 Q50 -80 67 -80 Q84 -80 85 -62 L84 -16 Q83 0 66 0 Z"/>
+    <line stroke="#2d3142" stroke-width="5.833333333333333" x1="58" y1="-77" x2="51" y2="-102"/>
+    <line stroke="#2d3142" stroke-width="5.833333333333333" x1="77" y1="-77" x2="84" y2="-102"/>
+    <g class="blink"><circle cx="50" cy="-106" r="8" fill="#fff" stroke="#2d3142" stroke-width="5.833333333333333"/><circle cx="52" cy="-105" r="3.6" fill="#2d3142"/></g>
+    <g class="blink"><circle cx="85" cy="-106" r="8" fill="#fff" stroke="#2d3142" stroke-width="5.833333333333333"/><circle cx="87" cy="-105" r="3.6" fill="#2d3142"/></g>
+    <path fill="none" stroke="#3d6390" stroke-width="10.00" d="M44 -66 Q66 -98 89 -66"/>
+    <rect x="38" y="-71" width="11" height="20" rx="4" fill="#3d6390"/>
+    <rect x="84" y="-71" width="11" height="20" rx="4" fill="#3d6390"/>
+    <path fill="none" stroke="#2d3142" stroke-width="5.833333333333333" d="M62 -40 Q69 -34 76 -40"/>
+    <circle cx="-8" cy="-50" r="42" fill="#fdf1ec" stroke="#bf4520" stroke-width="9.17"/>
+    <path fill="none" stroke="#bf4520" stroke-width="8.33" d="M-8 -50 m-4 0 a4 4 0 1 1 8 2 a10 10 0 1 1 -18 -6 a17 17 0 1 1 30 14 a24 24 0 1 1 -40 -24"/>
+  </g></g></g>
+    <animateMotion dur="14s" repeatCount="indefinite" path="M54 134 C86 134 86 96 122 98 S172 128 208 114 S262 66 290 62" keyPoints="0;1" keyTimes="0;1" calcMode="linear"/></g>
+  <text x="22" y="178" class="h" font-size="18">What to learn, in order</text>
+  <text x="22" y="198" class="s" font-size="11.5">math · DSP · tooling · core speech</text><text x="22" y="213" class="s" font-size="11.5"><tspan fill="#8f6a2e">★</tspan> marks the essentials</text>
+  <rect x="20" y="222" width="154" height="16" rx="3" fill="#f3f1ec"/>
+  <text x="26" y="233.5" class="c" font-size="10" fill="#2d3142">3 phases · 12 topics</text>
+  <g transform="translate(252 227)"><rect x="0" width="10" height="6" rx="1" fill="#3d6390"/><rect x="12" width="10" height="6" rx="1" fill="#3d6390"/><rect x="24" width="10" height="6" rx="1" fill="#3d6390"/><rect x="36" width="10" height="6" rx="1" fill="#e4e1da"/></g>
 </svg>

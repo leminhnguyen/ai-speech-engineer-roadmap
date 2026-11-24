@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">AI Speech Engineer Roadmap</title>
+  <desc id="desc">Title card: AI Speech Engineer Roadmap. Learn the foundations, build them from scratch, keep up with the frontier. Three steps, Roadmap, Tutorials and SOTA, are linked by arrows. A snail wearing headphones talks into a speech bubble of moving sound bars.</desc>
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4f5d75"/></marker></defs>
+  <style>
+    .tag { font-family: 'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-weight: 500; letter-spacing: .08em; }
+    .h { font-family: Geist,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; font-weight: 600; fill: #2d3142; }
+    .s { font-family: Geist,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; fill: #4f5d75; }
+    .c { font-family: 'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+    .serif { font-family: 'Instrument Serif',Georgia,'Times New Roman',serif; font-style: italic; fill: #4f5d75; }
+    .flow { stroke-dasharray: 2 5; stroke-linecap: round; animation: flow .9s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -14; } }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+    .bob { animation: bob 2.4s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translate(0,0); } 50% { transform: translate(0,-3px); } }
+    .bar { transform-box: fill-box; transform-origin: 50% 100%; animation: bar .9s ease-in-out infinite; }
+    @keyframes bar { 0%,100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+    .blink { transform-box: fill-box; transform-origin: center; animation: blink 4s infinite; }
+    @keyframes blink { 0%,93%,100% { transform: scaleY(1); } 96% { transform: scaleY(.1); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect x="1" y="1" width="1198" height="398" rx="8" fill="#f7f3ec" stroke="rgba(45,49,66,0.12)"/>
+  <text x="64" y="84" class="tag" font-size="14" fill="#bf4520">AN OPEN CURRICULUM · SPEECH AI</text>
+  <text x="64" y="160" class="h" font-size="60">AI Speech Engineer</text>
+  <text x="64" y="228" class="h" font-size="60">Roadmap</text>
+  <text x="64" y="276" class="serif" font-size="27">Learn the foundations. Build them from scratch.</text>
+  <text x="64" y="306" class="serif" font-size="27">Keep up with the frontier.</text>
+  <rect x="64" y="330" width="140" height="32" rx="6" fill="#fff" stroke="#3d6390" stroke-width="1.4"/><text x="134.0" y="350.5" class="tag" font-size="13" fill="#3d6390" text-anchor="middle">01 · ROADMAP</text><rect x="232" y="330" width="158" height="32" rx="6" fill="#f1f4ee" stroke="#4f6b45" stroke-width="1.4"/><text x="311.0" y="350.5" class="tag" font-size="13" fill="#4f6b45" text-anchor="middle">02 · TUTORIALS</text><rect x="418" y="330" width="130" height="32" rx="6" fill="#fdf1ec" stroke="#bf4520" stroke-width="1.4"/><text x="483.0" y="350.5" class="tag" font-size="13" fill="#bf4520" text-anchor="middle">03 · SOTA</text>
+  <g stroke="#4f5d75" stroke-width="1.6" fill="none">
+    <line class="flow" x1="208" y1="346" x2="226" y2="346" marker-end="url(#arr)"/>
+    <line class="flow" x1="394" y1="346" x2="412" y2="346" marker-end="url(#arr)"/>
+  </g>
+
+  <line x1="700" y1="318" x2="1140" y2="318" stroke="rgba(45,49,66,0.25)" stroke-width="1.2"/>
+  <path class="flow" d="M716 318 H812" stroke="#bf4520" stroke-width="2" opacity=".55"/>
+  <path d="M930 44 h170 q8 0 8 8 v66 q0 8 -8 8 h-112 l-20 18 l3 -18 h-41 q-8 0 -8 -8 v-66 q0 -8 8 -8 z" fill="#fff" stroke="#2d3142" stroke-width="1.4"/>
+  <text x="938" y="62" class="tag" font-size="10" fill="#3d6390">SPEAKING</text>
+  <clipPath id="bub"><rect x="940" y="68" width="158" height="52" rx="3"/></clipPath>
+  <line x1="940" y1="94" x2="1098" y2="94" stroke="#9aa3b5" stroke-width="1" opacity=".5"/>
+  <g clip-path="url(#bub)"><path d="M942.0 94.0 L943.2 92.4 L944.5 91.8 L945.8 93.4 L947.0 96.8 L948.2 98.8 L949.5 96.3 L950.8 89.9 L952.0 85.2 L953.2 88.3 L954.5 98.4 L955.8 106.3 L957.0 103.3 L958.2 91.4 L959.5 81.6 L960.8 83.2 L962.0 94.0 L963.2 103.2 L964.5 103.1 L965.8 95.7 L967.0 88.8 L968.2 87.9 L969.5 92.0 L970.8 96.5 L972.0 97.8 L973.2 95.8 L974.5 92.9 L975.8 91.3 L977.0 92.1 L978.2 94.5 L979.5 96.7 L980.8 96.8 L982.0 94.0 L983.2 90.2 L984.5 88.9 L985.8 92.7 L987.0 99.5 L988.2 103.0 L989.5 98.0 L990.8 87.4 L992.0 80.7 L993.2 86.0 L994.5 99.9 L995.8 109.8 L997.0 105.7 L998.2 90.8 L999.5 78.8 L1000.8 80.8 L1002.0 94.0 L1003.2 105.8 L1004.5 106.1 L1005.8 96.3 L1007.0 86.3 L1008.2 84.4 L1009.5 90.6 L1010.8 98.5 L1012.0 101.4 L1013.2 97.8 L1014.5 91.6 L1015.8 88.1 L1017.0 90.0 L1018.2 95.0 L1019.5 98.6 L1020.8 97.9 L1022.0 94.0 L1023.2 90.7 L1024.5 90.6 L1025.8 93.3 L1027.0 96.3 L1028.2 97.2 L1029.5 95.3 L1030.8 91.9 L1032.0 89.7 L1033.2 91.2 L1034.5 96.3 L1035.8 100.7 L1037.0 99.4 L1038.2 92.4 L1039.5 86.3 L1040.8 87.2 L1042.0 94.0 L1043.2 99.6 L1044.5 99.3 L1045.8 94.9 L1047.0 91.3 L1048.2 91.1 L1049.5 93.1 L1050.8 95.0 L1052.0 95.6 L1053.2 94.8 L1054.5 93.5 L1055.8 92.5 L1057.0 92.7 L1058.2 94.4 L1059.5 96.6 L1060.8 96.9 L1062.0 94.0 L1063.2 89.3 L1064.5 87.5 L1065.8 92.3 L1067.0 101.3 L1068.2 105.8 L1069.5 99.2 L1070.8 85.6 L1072.0 77.7 L1073.2 84.5 L1074.5 100.7 L1075.8 111.1 L1077.0 105.9 L1078.2 90.9 L1079.5 80.5 L1080.8 83.1 L1082.0 94.0 L1083.2 102.1 L1084.5 101.6 L1085.8 95.3 L1087.0 90.0 L1088.2 89.5 L1089.5 92.6 L1090.8 95.7 L1092.0 96.5 L1093.2 95.2 L1094.5 93.3 L1095.8 92.4 L1097.0 93.0 L1098.2 94.3 L1099.5 95.1 L1100.8 95.0 L1102.0 94.0 L1103.2 92.4 L1104.5 91.8 L1105.8 93.4 L1107.0 96.8 L1108.2 98.8 L1109.5 96.3 L1110.8 89.9 L1112.0 85.2 L1113.2 88.3 L1114.5 98.4 L1115.8 106.3 L1117.0 103.3 L1118.2 91.4 L1119.5 81.6 L1120.8 83.2 L1122.0 94.0 L1123.2 103.2 L1124.5 103.1 L1125.8 95.7 L1127.0 88.8 L1128.2 87.9 L1129.5 92.0 L1130.8 96.5 L1132.0 97.8 L1133.2 95.8 L1134.5 92.9 L1135.8 91.3 L1137.0 92.1 L1138.2 94.5 L1139.5 96.7 L1140.8 96.8 L1142.0 94.0 L1143.2 90.2 L1144.5 88.9 L1145.8 92.7 L1147.0 99.5 L1148.2 103.0 L1149.5 98.0 L1150.8 87.4 L1152.0 80.7 L1153.2 86.0 L1154.5 99.9 L1155.8 109.8 L1157.0 105.7 L1158.2 90.8 L1159.5 78.8 L1160.8 80.8 L1162.0 94.0 L1163.2 105.8 L1164.5 106.1 L1165.8 96.3 L1167.0 86.3 L1168.2 84.4 L1169.5 90.6 L1170.8 98.5 L1172.0 101.4 L1173.2 97.8 L1174.5 91.6 L1175.8 88.1 L1177.0 90.0 L1178.2 95.0 L1179.5 98.6 L1180.8 97.9 L1182.0 94.0 L1183.2 90.7 L1184.5 90.6 L1185.8 93.3 L1187.0 96.3 L1188.2 97.2 L1189.5 95.3 L1190.8 91.9 L1192.0 89.7 L1193.2 91.2 L1194.5 96.3 L1195.8 100.7 L1197.0 99.4 L1198.2 92.4 L1199.5 86.3 L1200.8 87.2 L1202.0 94.0 L1203.2 99.6 L1204.5 99.3 L1205.8 94.9 L1207.0 91.3 L1208.2 91.1 L1209.5 93.1 L1210.8 95.0 L1212.0 95.6 L1213.2 94.8 L1214.5 93.5 L1215.8 92.5 L1217.0 92.7 L1218.2 94.4 L1219.5 96.6 L1220.8 96.9 L1222.0 94.0 L1223.2 89.3 L1224.5 87.5 L1225.8 92.3 L1227.0 101.3 L1228.2 105.8 L1229.5 99.2 L1230.8 85.6 L1232.0 77.7 L1233.2 84.5 L1234.5 100.7 L1235.8 111.1 L1237.0 105.9 L1238.2 90.9 L1239.5 80.5 L1240.8 83.1 L1242.0 94.0 L1243.2 102.1 L1244.5 101.6 L1245.8 95.3 L1247.0 90.0 L1248.2 89.5 L1249.5 92.6 L1250.8 95.7 L1252.0 96.5 L1253.2 95.2 L1254.5 93.3 L1255.8 92.4 L1257.0 93.0 L1258.2 94.3 L1259.5 95.1 L1260.8 95.0 L1262.0 94.0" fill="none" stroke="#3d6390" stroke-width="1.5" stroke-linejoin="round">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-160 0" dur="2.4s" repeatCount="indefinite"/></path></g>
+  <text x="1056" y="140" class="c pulse" font-size="11" fill="#bf4520" text-anchor="middle">16 kHz · mono</text>
+  
+  <g transform="translate(900 318) scale(1.3)"><g class="bob" stroke-linejoin="round" stroke-linecap="round">
+    <path fill="#f1d9c4" stroke="#2d3142" stroke-width="1.0769230769230769" d="M-78 0 Q-86 -16 -60 -18 L34 -18 Q44 -18 46 -34 L48 -62 Q50 -80 67 -80 Q84 -80 85 -62 L84 -16 Q83 0 66 0 Z"/>
+    <line stroke="#2d3142" stroke-width="1.0769230769230769" x1="58" y1="-77" x2="51" y2="-102"/>
+    <line stroke="#2d3142" stroke-width="1.0769230769230769" x1="77" y1="-77" x2="84" y2="-102"/>
+    <g class="blink"><circle cx="50" cy="-106" r="8" fill="#fff" stroke="#2d3142" stroke-width="1.0769230769230769"/><circle cx="52" cy="-105" r="3.6" fill="#2d3142"/></g>
+    <g class="blink"><circle cx="85" cy="-106" r="8" fill="#fff" stroke="#2d3142" stroke-width="1.0769230769230769"/><circle cx="87" cy="-105" r="3.6" fill="#2d3142"/></g>
+    <path fill="none" stroke="#3d6390" stroke-width="1.85" d="M44 -66 Q66 -98 89 -66"/>
+    <rect x="38" y="-71" width="11" height="20" rx="4" fill="#3d6390"/>
+    <rect x="84" y="-71" width="11" height="20" rx="4" fill="#3d6390"/>
+    <path fill="none" stroke="#2d3142" stroke-width="1.0769230769230769" d="M62 -40 Q69 -34 76 -40"/>
+    <circle cx="-8" cy="-50" r="42" fill="#fdf1ec" stroke="#bf4520" stroke-width="1.69"/>
+    <path fill="none" stroke="#bf4520" stroke-width="1.54" d="M-8 -50 m-4 0 a4 4 0 1 1 8 2 a10 10 0 1 1 -18 -6 a17 17 0 1 1 30 14 a24 24 0 1 1 -40 -24"/>
+  </g></g>
+  <text x="1140" y="344" class="c" font-size="11" fill="#4f5d75" text-anchor="end">slow and steady, one lesson at a time</text>
+</svg>

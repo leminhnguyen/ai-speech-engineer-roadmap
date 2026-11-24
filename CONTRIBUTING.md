@@ -31,3 +31,13 @@ make figures notebooks     # when you changed a lesson
 ```
 
 The same checks run in [GitHub Actions](.github/workflows/ci.yml) on every push and pull request.
+
+| Command | What it does |
+| --- | --- |
+| `make audit` | Verify every lesson has the required files |
+| `make test` | Run the unit tests of every lesson |
+| `make figures` | Regenerate lesson plots |
+| `make notebooks` | Execute every notebook from a clean state |
+| `make sota` | Rebuild the SOTA tracker pages from `sota/data/entries.yaml` |
+| `make sota-check` | Fail if the SOTA pages are out of date (used in CI) |
+| `make check` | `audit` + `test` + `sota-check` |
