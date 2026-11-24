@@ -13,13 +13,13 @@
 <table>
 <tr>
 <td width="33%" valign="top">
-<a href="roadmap/README.md"><img src="assets/cards/roadmap.svg" width="100%" alt="Roadmap: what to learn, and in what order"/></a>
+<a href="roadmap/README.md"><img src="assets/pillars/roadmap.svg" width="100%" alt="Roadmap: what to learn, and in what order"/></a>
 </td>
 <td width="33%" valign="top">
-<a href="tutorials/README.md"><img src="assets/cards/tutorials.svg" width="100%" alt="Tutorials: build it from scratch to understand it"/></a>
+<a href="tutorials/README.md"><img src="assets/pillars/tutorials.svg" width="100%" alt="Tutorials: build it from scratch to understand it"/></a>
 </td>
 <td width="33%" valign="top">
-<a href="sota/README.md"><img src="assets/cards/sota.svg" width="100%" alt="SOTA Tracker: what's new, and why it matters"/></a>
+<a href="sota/README.md"><img src="assets/pillars/sota.svg" width="100%" alt="SOTA Tracker: what's new, and why it matters"/></a>
 </td>
 </tr>
 </table>
